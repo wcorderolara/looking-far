@@ -1,0 +1,407 @@
+@import "nib/vendor"
+
+vendor-prefixes =  o ms moz webkit
+
+@font-face
+	font-family Courier
+	font-style basic
+	src url('../fonts/cour.ttf')
+
+$texto =  #7f8c8d
+
+
+body
+	font-family Courier
+
+
+header
+	margin 0
+	padding 0
+	width 100%
+
+	img
+		cursor pointer
+		filter grayscale(100%)
+		-webkit-filter grayscale(100%)
+		-moz-filter grayscale(100%)
+		-ms-filter grayscale(100%)
+		-o-filter grayscale(100%)
+		transition all 0.5s ease
+		width 100%
+
+	img:hover
+		filter grayscale(0%)
+		-webkit-filter grayscale(0%)
+		-moz-filter grayscale(0%)
+		-ms-filter grayscale(0%)
+		-o-filter grayscale(0%)
+		transition all 0.5s ease
+
+	ul
+		margin 0 auto
+		padding 0
+		margin-top 8px
+		text-align center
+		width 90%
+
+		li
+			color $texto
+			display inline-block
+			vertical-align middle
+			img
+				width 115px
+
+				&.logo
+					width 195px
+			p
+				font-size 18px
+
+#menu
+	border-bottom 2px solid $texto
+	margin 0 auto
+	padding 0
+	width 90%
+
+	ul
+		margin 0 auto
+		padding 0
+		margin-top 15px
+		text-align center
+		width 100%
+
+		li
+			display inline-block
+			font-size 20px
+			vertical-align middle
+
+			a
+				font-size 20px
+				text-decoration none
+
+			a:hover
+				font-weight bold
+
+		li.separate
+			padding 0 35px 0 35px
+
+#social-menu
+	margin 0
+	padding 0
+	margin-top 10px
+	text-align center
+	width 90%
+
+	#post-here, #networks
+		display inline-block
+		vertical-align middle
+
+	#post-here
+		float left
+		margin-top 13px
+		width 35%
+
+		a
+			font-size 20px
+			text-decoration none
+
+		a:hover
+			cursor pointer
+			text-decoration underline
+
+	#networks
+		margin-right -20%
+		width 50%
+
+		ul
+			margin 0 auto
+			padding 0
+			text-align right
+			width 100%
+
+			li
+				display inline-block
+				vertical-align middle
+				width 10%
+
+				img
+					transform scale(1,1)
+					transition-timing-function ease-out
+					transition-duration 250ms
+					width 38px
+
+				img:hover
+					cursor pointer
+					transform scale(1.35,1.37)
+					transition-timing-function ease-in
+					transition-duration 250ms
+					position relative
+					z-index 99
+
+.container
+	margin-top 15px
+	text-align justify
+
+	article
+		padding-bottom 15px
+		img
+			width 100%
+
+		figure, .far
+			display inline-block
+			vertical-align middle 
+		figure
+			width 75px
+
+		div.far
+			width 85%
+
+			p
+				font-size 13px
+				margin 0
+				padding 0
+			.fear,.aspiration,.regreat,.info
+				margin 0
+				padding 0
+
+			.info
+				color #868686
+				font-size 11px
+				font-weight bold
+				text-align left
+				width 100%
+		div.share
+			backgrund-color #D5D5D5
+			display none
+
+			ul
+				li
+					display inline-block
+					vertical-align middle
+
+					a.share-facebook, a.share-twitter
+						border-radius 10px
+						color #FFF
+						font-family Helvetica
+						padding 10px
+						text-decoration none
+
+					a.share-facebook
+						background-color #3B5998
+
+					a.share-twitter
+						background-color #31B6E3
+						width 250px
+				li:hover
+					cursor pointer
+
+	#post-form
+		margin 0 auto
+		padding 0
+		text-align center
+		width 95%
+
+		h1
+			font-weight bold
+			font-size 35px
+
+		#social-login
+			width 100%
+
+			a.fb-login, a.tw-login
+				display inline-block
+				font-weight bold
+				font-size 20px
+				text-align center
+				text-decoration none
+				vertical-align middle
+				width 40%
+
+			a.fb-login:hover, a.tw-login:hover
+				text-decoration underline
+				
+			a.fb-login
+				color #3B5998
+			a.tw-login
+				color #31B6E3
+
+		#login
+			margin 0 auto
+			padding 0
+			padding-top 25px
+			width 65%
+
+			span
+				margin 0
+				padding 0
+				width 100%
+
+				label, input, textarea,select
+					display inline-block
+					margin 0
+					padding 0
+					margin-bottom 8px
+					padding 5px 0 5px 0
+					vertical-align top
+
+				label
+					font-size 15px
+					font-weight bold
+					text-align right
+					width 18%
+
+				input, textarea, select
+					width 70%
+
+			button
+				font-size 15px
+				width 130px
+
+	/*article:hover
+		cursor pointer
+		div.share
+			display block
+			transition display 0.5 ease-in*/
+
+@media only screen and (max-width: 479px) 
+	header 
+		ul 
+			li.hide 
+				display none
+	.container
+		text-align center
+		img 
+			width 100% 
+		
+		#text
+			padding:40px 0 40px 0
+			h1,h2
+				font-size 60px 
+				letter-spacing 10px
+			
+			h2 
+				padding-top 25px
+		
+		#social 
+			margin-top 45px
+
+			ul
+				width 100%
+				li
+					img
+						width 64px
+					img:hover
+						transform scale(1,1)
+						transition-timing-function ease-out
+						transition-duration 250ms
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+	header 
+		img
+			cursor pointer
+			filter grayscale(0%)
+			-webkit-filter grayscale(0%)
+			-moz-filter grayscale(0%)
+			-ms-filter grayscale(0%)
+			-o-filter grayscale(0%)
+			transition all 0.5s ease
+			width 100%
+
+		ul
+			text-align center
+			width 90%
+			
+			li.hide
+				text-align center
+
+				&.ballon
+					width 10%
+				
+				&.dot
+					p
+						font-size 10px
+						letter-spacing -3px
+			li
+				img
+					width 100%
+					&.logo
+						width 120px
+				
+
+	.container
+		text-align center
+		img 
+			width 100% 
+		
+		#text
+			padding:40px 0 40px 0
+			h1,h2
+				font-size 90px 
+				letter-spacing 10px
+			
+			h2 
+				padding-top 25px
+		
+		#social 
+			margin-top 45px
+
+			ul
+				width 100%
+				li
+					img
+						width 64px
+					img:hover
+						transform scale(1,1)
+						transition-timing-function ease-out
+						transition-duration 250ms
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px)
+	header 
+		img
+			cursor pointer
+			filter grayscale(0%)
+			-webkit-filter grayscale(0%)
+			-moz-filter grayscale(0%)
+			-ms-filter grayscale(0%)
+			-o-filter grayscale(0%)
+			transition all 0.5s ease
+			width 100%
+
+		ul
+			text-align center
+			width 90%
+			li
+				img
+					width 70px
+					&.logo
+						width 170px
+				p
+					font-size 13px
+					letter-spacing -3px
+
+	.container
+		text-align center
+		img 
+			width 100% 
+		
+		#text
+			padding:40px 0 40px 0
+			h1,h2
+				font-size 90px 
+				letter-spacing 10px
+			
+			h2 
+				padding-top 25px
+		
+		#social 
+			margin-top 45px
+
+			ul
+				width 80%
+				li
+					img
+						width 90px
+					img:hover
+						transform scale(1,1)
+						transition-timing-function ease-out
+						transition-duration 250ms

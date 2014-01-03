@@ -1,0 +1,31 @@
+{
+  "name": "looking-far",
+  "version": "0.0.1",
+  "description": "looking far book",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "~3.4.7",
+    "express.io": "~1.1.13",
+    "swig": "~1.2.2",
+    "connect-redis": "~1.4.6",
+    "underscore": "~1.5.2",
+    "mongoose": "~3.8.1",
+    "passport": "~0.1.17",
+    "passport-twitter": "~1.0.2",
+    "passport-facebook": "~1.0.2"
+  },
+  "keywords": [
+    "Fear",
+    "Aspiration",
+    "Regreat",
+    "looking-far",
+    "FAR"
+  ],
+  "author": "viviano",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
