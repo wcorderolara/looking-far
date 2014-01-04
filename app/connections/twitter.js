@@ -7,8 +7,8 @@ var twitterConnection = function (app){
 	console.log('twitterConnection is load');
 		
 	passport.use( new TwitterStrategy({
-			consumerKey :'QJpbYDtC9GFpeVD3sh6HFw',
-			consumerSecret :'Ta9xNWMmhBhzqflCMcXKwfVA3ZUiPU8yOw3SYx5bcE',
+			consumerKey :'I1wtPCSNg61NdDKX7cEg',
+			consumerSecret :'W3oJdWoevKgNbeiGh6qvZjiKRH1ePhhNDFN4AaG28E',
 			callbackURL: '/auth/twitter/callback'
 		},
 		function (token, tokenSecret, profile, done){
