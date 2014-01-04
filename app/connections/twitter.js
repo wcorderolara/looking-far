@@ -5,8 +5,7 @@ var User = require('../models/user');
 
 var twitterConnection = function (app){
 	console.log('twitterConnection is load');
-	debugger;
-	
+		
 	passport.use( new TwitterStrategy({
 			consumerKey :'QJpbYDtC9GFpeVD3sh6HFw',
 			consumerSecret :'Ta9xNWMmhBhzqflCMcXKwfVA3ZUiPU8yOw3SYx5bcE',
