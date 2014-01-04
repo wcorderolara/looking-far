@@ -55,6 +55,11 @@ header
 					width 195px
 			p
 				font-size 18px
+	#divider
+		border-bottom 2px solid $texto
+		margin 0 auto
+		padding 0
+		width 95%
 
 #menu
 	border-bottom 2px solid $texto
@@ -140,6 +145,42 @@ header
 .container
 	margin-top 15px
 	text-align justify
+
+	#text
+		padding 50px 0 50px 0
+		text-align center
+		h1,h2
+			font-size 125px
+			letter-spacing 25px
+		h2
+			padding-top 75px
+
+	#social
+		margin-top 45px
+		text-align center
+		ul
+			margin 0 auto
+			padding 0
+			width 80%
+
+			li
+				display inline-block
+				vertical-align middle
+				width 30%
+
+				img
+					transform scale(1,1)
+					transition-timing-function ease-out
+					transition-duration 250ms
+					width 90px
+
+				img:hover
+					cursor pointer
+					transform scale(1.35,1.37)
+					transition-timing-function ease-in
+					transition-duration 250ms
+					position relative
+					z-index 99
 
 	article
 		padding-bottom 15px

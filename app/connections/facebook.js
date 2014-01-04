@@ -11,8 +11,8 @@ var facebookConnection = function (app){
 		},
 
 		function (accessToken, refreshToken, profile, done){
-			//debugger;
-			console.log(profile);
+			debugger;
+			//console.log(profile);
 
 			done(null, profile);
 		}

@@ -18,8 +18,6 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', './app/views');
 
-
-
 // Post, Cookies and Sessions Settings
 app.configure(function(){
 	//Static files load
@@ -37,8 +35,6 @@ app.configure(function(){
 });
 
 //authentication
-
-
 passport.serializeUser(function (user, done){
 	done(null,user);
 });

@@ -26,6 +26,10 @@ var homeController =  function (app){
 		res.render('index');
 	})
 
+	app.get('/test', function (req,res){
+		res.render('test');
+	})
+
 	app.get('/app', function (req,res){
 		res.render('app');
 	})
