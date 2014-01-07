@@ -34,6 +34,10 @@ var homeController =  function (app){
 		res.render('app');
 	})
 
+	app.get('/about', function(req,res){
+		res.render('about');
+	})
+
 	app.get('/auth/facebook', passport.authenticate( 'facebook', { scope:'read_stream' } ) );
 
 	app.post('/log-in', function (req, res){
