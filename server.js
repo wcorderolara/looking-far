@@ -26,7 +26,8 @@ app.configure(function(){
 	app.set('view cache', false);
 	app.use(express.logger());
 	app.use(express.cookieParser());
-	app.use(express.bodyParser());
+	//app.use(express.bodyParser());
+	app.use(express.urlencoded());
 	app.use(express.json());
 	app.use(express.session({ secret: 'SECRET' }));
     app.use(express.session({ secret: 'SECRET' }));

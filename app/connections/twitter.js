@@ -1,7 +1,7 @@
 var passport = require('passport'),
 	TwitterStrategy = require('passport-twitter').Strategy;
 
-var User = require('../models/user');
+//var User = require('../models/user');
 
 var twitterConnection = function (app){
 	console.log('twitterConnection is load');
