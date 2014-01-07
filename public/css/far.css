@@ -48,7 +48,7 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:95
 .container article div.share ul li a.share-facebook{background-color:#3b5998}
 .container article div.share ul li a.share-twitter{background-color:#31b6e3;width:250px}
 .container article div.share ul li:hover{cursor:pointer}
-.container article .text-about{color:#000;font-size:15px;line-height:170%;}
+.container article .text-about{color:#000;font-size:16px;line-height:170%;}
 .container article .text-about i{text-style:italic}
 .container #post-form{margin:0 auto;padding:0;text-align:center;width:95%;}
 .container #post-form h1{font-weight:bold;font-size:35px}
