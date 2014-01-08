@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/far.css">
+{% endblock %}
+
+{%block header %}
+	<header>
+		<ul>
+			<li class="hide ballon">
+				<a href="/maria"><img src="/img/ballons/Esfera1.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/lee"><img src="/img/ballons/Esfera2.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li>
+				<a href="/test"><img src="/img/logo.png" title="" alt="" class="logo"></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/josette"><img src="/img/ballons/Esfera3.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/victor"><img src="/img/ballons/Esfera4.png" title="" alt=""></a>
+			</li>
+		</ul>
+	</header>
+{% endblock %}
+
+{% block container %}
+	
+	<section class="container">
+		
+		<article class="sixteen columns">
+			<div class="hero">
+				<img src="/img/storys/Historia2.png" alt="" title="">
+			</div>
+			<div class="story-far">
+				<p><strong>F.</strong> Not being a good mother</p>
+				<p><strong>A.</strong> Raising well adjusted and happy children </p>
+				<p><strong>R.</strong> Not making more of my education</p>	
+			</div>
+
+			<div class="story-info">
+				<p>Josette Jae Holly, 36</p>
+				<p>Las Vegas, Nevada</p>
+			</div>
+
+			<div class="story-bio">
+				<p>Later that night, at what seems to be the last neighbourhood bar in Vegas, I meet Josette. A single mother of two, Josette was nice enough to come in on her day off, just to meet up with me. Fearless of being accused to be one of these modern day kids, I ask her the same question:</p>
+
+				<p> <em>“The tattoos that mean the most to me are my sons names”</em> </p>
+			</div>
+
+		</article>
+
+	</section><!-- container -->
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+{% endblock %}

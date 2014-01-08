@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/far.css">
+{% endblock %}
+
+{%block header %}
+	<header>
+		<ul>
+			<li class="hide ballon">
+				<a href="/maria"><img src="/img/ballons/Esfera1.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/lee"><img src="/img/ballons/Esfera2.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li>
+				<a href="/test"><img src="/img/logo.png" title="" alt="" class="logo"></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/josette"><img src="/img/ballons/Esfera3.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/victor"><img src="/img/ballons/Esfera4.png" title="" alt=""></a>
+			</li>
+		</ul>
+	</header>
+{% endblock %}
+
+{% block container %}
+	
+	<section class="container">
+		
+		<article class="sixteen columns">
+			<div class="hero">
+				<img src="/img/storys/Historia1.png" alt="" title="">
+			</div>
+			<div class="story-far">
+				<p><strong>F.</strong> Flying and things that are out of my control</p>
+				<p><strong>A.</strong> To keep a happy family and a good job </p>
+				<p><strong>R.</strong> Being far from my loved ones back in Puerto Rico, especially my friends from the 
+					  olympic team we would travel a lot together, I miss that freedom and happiness we 
+					  shared
+				</p>	
+			</div>
+
+			<div class="story-info">
+				<p>María Victoria López, 56</p>
+				<p>The Bronx, New York</p>
+			</div>
+
+			<div class="story-bio">
+
+			</div>
+
+		</article>
+
+	</section><!-- container -->
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+{% endblock %}

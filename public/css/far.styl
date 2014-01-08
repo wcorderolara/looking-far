@@ -242,6 +242,29 @@ header
 
 			i
 				text-style italic
+		div.story-far
+			margin-bottom 10px
+			p
+				margin 0
+				padding 0
+				text-align justify
+		div.story-info
+			margin-bottom 10px
+			p
+				font-size 13px
+				font-weight bold
+				margin 0
+				padding 0
+				text-align justify
+
+		div.story-bio
+			margin-bottom 5px
+			p
+				font-size 15px
+				margin-top 2px
+				padding 0
+				text-align justify
+
 
 
 	#post-form
@@ -306,6 +329,29 @@ header
 				font-size 15px
 				width 130px
 
+footer
+	margin 0
+	padding 0
+	width 100%
+
+	ul
+		margin 0 auto
+		padding 0
+		margin-top 8px
+		text-align center
+		width 90%
+
+		li
+			display inline-block
+			font-size 15px
+			vertical-align top
+
+			a
+				text-decoration none
+
+			a:hover
+				font-weight bold
+
 	/*article:hover
 		cursor pointer
 		div.share
@@ -343,6 +389,9 @@ header
 						transform scale(1,1)
 						transition-timing-function ease-out
 						transition-duration 250ms
+		article
+			div.story-far, div.story-info, div.story-bio
+				text-align left
 
 @media only screen and (min-width: 480px) and (max-width: 767px)
 	header 
@@ -404,6 +453,10 @@ header
 						transition-timing-function ease-out
 						transition-duration 250ms
 
+		article
+			div.story-far, div.story-info, div.story-bio
+				text-align left
+
 
 @media only screen and (min-width: 768px) and (max-width: 959px)
 	header 
@@ -455,3 +508,6 @@ header
 						transform scale(1,1)
 						transition-timing-function ease-out
 						transition-duration 250ms
+		article
+			div.story-far, div.story-info, div.story-bio
+				text-align left
