@@ -3,6 +3,8 @@ var passport = require('passport');
 var homeController =  function (app){
 	console.log("homeController load");
 
+
+
 	//var isntLoggedIn = function (req, res, next){
 		//debugger;
 		//if(!req.session.user){
@@ -31,7 +33,19 @@ var homeController =  function (app){
 	});
 
 	app.get('/app', function (req,res){
-		res.render('app');
+		//debugger;
+
+		if(!req.isAuthenticated()){
+			res.render('app');
+		}else{
+			debugger;
+			res.render('app',{
+				login : true,
+				user : req.session.passport.user.displayName,
+				//picture : req.session.passport.user.photos == 'undefined' ? null :  req.session.passport.user.photos[0].value
+			});	
+		}
+		//res.render('app');
 	});
 
 	app.get('/about', function(req,res){

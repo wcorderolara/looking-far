@@ -65,7 +65,7 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:95
 .container #post-form #social-login a.tw-login{color:#31b6e3}
 .container #post-form #login{margin:0 auto;padding:0;padding-top:25px;width:65%;}
 .container #post-form #login span{margin:0;padding:0;width:100%;}
-.container #post-form #login span label,.container #post-form #login span input,.container #post-form #login span textarea,.container #post-form #login span select{display:inline-block;margin:0;padding:0;margin-bottom:8px;padding:5px 0 5px 0;vertical-align:top}
+.container #post-form #login span label,.container #post-form #login span input,.container #post-form #login span textarea,.container #post-form #login span select{color:#000;display:inline-block;font-size:15px;margin:0;padding:0;margin-bottom:8px;padding:5px 0 5px 0;vertical-align:top}
 .container #post-form #login span label{font-size:15px;font-weight:bold;text-align:right;width:18%}
 .container #post-form #login span input,.container #post-form #login span textarea,.container #post-form #login span select{width:70%}
 .container #post-form #login button{font-size:15px;width:130px}

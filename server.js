@@ -1,6 +1,6 @@
-var express = require('express.io'),
-	swig = require('swig'),
-	_ = require('underscore'),
+var express  = require('express.io'),
+	swig 	 = require('swig'),
+	_ 		 = require('underscore'),
 	passport = require('passport');
 //var RedisStore = require('connect-redis')(express);
 var app = express();
@@ -8,6 +8,9 @@ var app = express();
 app.http().io();
 
 var users = [];
+var login,
+	user,
+	picture;
 
 swig.setDefaults({
 	cache:false
