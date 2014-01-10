@@ -2,9 +2,7 @@ var passport = require('passport');
 
 var homeController =  function (app){
 	console.log("homeController load");
-
-
-
+	
 	//var isntLoggedIn = function (req, res, next){
 		//debugger;
 		//if(!req.session.user){
@@ -38,11 +36,12 @@ var homeController =  function (app){
 		if(!req.isAuthenticated()){
 			res.render('app');
 		}else{
-			debugger;
+			//console.log(req.session.passport.user.photos[0].value);
+			//debugger;
 			res.render('app',{
 				login : true,
 				user : req.session.passport.user.displayName,
-				//picture : req.session.passport.user.photos == 'undefined' ? null :  req.session.passport.user.photos[0].value
+				picture : req.session.passport.user.photos[0].value
 			});	
 		}
 		//res.render('app');
