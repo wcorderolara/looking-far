@@ -11,7 +11,6 @@ var appController = function(app){
 		}
 	}
 
-
 	app.get('/test', function (req,res){
 		Post.find({})
 
