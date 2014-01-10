@@ -2,7 +2,7 @@ var passport = require('passport');
 
 var homeController =  function (app){
 	console.log("homeController load");
-	
+
 	//var isntLoggedIn = function (req, res, next){
 		//debugger;
 		//if(!req.session.user){
@@ -24,27 +24,6 @@ var homeController =  function (app){
 
 	app.get('/', function (req, res){
 		res.render('index');
-	});
-
-	app.get('/test', function (req,res){
-		res.render('test');
-	});
-
-	app.get('/app', function (req,res){
-		//debugger;
-
-		if(!req.isAuthenticated()){
-			res.render('app');
-		}else{
-			//console.log(req.session.passport.user.photos[0].value);
-			//debugger;
-			res.render('app',{
-				login : true,
-				user : req.session.passport.user.displayName,
-				picture : req.session.passport.user.photos[0].value
-			});	
-		}
-		//res.render('app');
 	});
 
 	app.get('/about', function(req,res){

@@ -72,36 +72,36 @@
 
 {% block container %}
 	
-	<section class="container">
+	<section id="posts" class="container">
 		
-		<article class="sixteen columns">
-			<figure>
-				<img src="/img/posts/Esfera5.png" alt="" title="">
-			</figure>
-			<div class="far">
-				<p class="fear">
-					<strong>fear:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.
-				</p>
-				<p class="aspiration">
-					<strong>aspiration:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.
-				</p>
-				<p class="regreat">
-					<strong>regreat:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.
-				</p>
-				<p class="info">Jalaya Serpan, 8 years, Began, Myarmar</p>
-			</div>
-			<div class="share">
-				<ul>
-					<li><a class="share-facebook">share on Facebook</a></li>
-					<li><a class="share-twitter">share on Twitter</a> </li>
-				</ul>
-			</div>
-		</article>
+		{% for post in posts %}
+			<article class="sixteen columns">
+				<figure>
+					<img src="{{ post.photo }}" alt="" title="">
+				</figure>
+				<div class="far">
+					<p class="fear">
+						<strong>fear:</strong> {{ post.userfear }}
+					</p>
+					<p class="aspiration">
+						<strong>aspiration:</strong> {{ post.useraspiration }}
+					</p>
+					<p class="regreat">
+						<strong>regreat:</strong> {{ post.userregreat }}
+					</p>
+					<p class="info">{{post.username}}, {{ post.userage }} years, {{post.usercity}}, {{post.usercountry}}</p>
+				</div>
+				<div class="share">
+					<ul>
+						<li><a class="share-facebook">share on Facebook</a></li>
+						<li><a class="share-twitter">share on Twitter</a> </li>
+					</ul>
+				</div>
+			</article>
+		{% endfor %}
+		
 
-		<article class="sixteen columns">
+		<!--article class="sixteen columns">
 			<figure>
 				<img src="/img/posts/Esfera6.png" alt="" title="">
 			</figure>
@@ -180,7 +180,7 @@
 					<li><a class="share-twitter">share on Twitter</a> </li>
 				</ul>
 			</div>
-		</article>
+		</article-->
 
 	</section><!-- container -->
 {% endblock %}
