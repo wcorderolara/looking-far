@@ -39,7 +39,7 @@ var appController = function(app){
 	});
 
 	app.post('/post-far',function (req,res){
-		//debugger;
+		debugger;
 		var post = new Post({
 			photo : req.body.picture,
 			usermail : req.body.email,
