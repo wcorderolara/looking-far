@@ -39,6 +39,7 @@ var homeController =  function (app){
 	});
 
 	app.get('/contact', function(req,res){
+		debugger;
 		res.render('contact');
 	});
 

@@ -51,9 +51,11 @@ passport.deserializeUser(function (obj, done){
 
 var homeController = require('./app/controllers/home');
 var appController = require('./app/controllers/app');
+var mailController = require('./app/controllers/mail');
 
 homeController(app);
 appController(app);
+mailController(app);
 
 //Connections
 var twitterConnection = require('./app/connections/twitter');
