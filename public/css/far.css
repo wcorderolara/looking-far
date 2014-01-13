@@ -10,6 +10,7 @@ header ul li img{width:140px;}
 header ul li img.logo{width:195px}
 header ul li p{font-size:14px}
 header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:100%}
+.fixed{background-color:#fff;width:100%;position:fixed;top:0;left:40px;z-index:9999}
 #menu{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:92.5%;}
 #menu ul{margin:0 auto;padding:0;margin-top:15px;text-align:center;width:100%;}
 #menu ul li{display:inline-block;font-size:16px;vertical-align:middle;}
