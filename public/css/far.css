@@ -9,8 +9,8 @@ header ul li a{font-size:40px;text-decoration:none}
 header ul li img{width:140px;}
 header ul li img.logo{width:195px}
 header ul li p{font-size:14px}
-header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:95%}
-#menu{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:90%;}
+header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:100%}
+#menu{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:92.5%;}
 #menu ul{margin:0 auto;padding:0;margin-top:15px;text-align:center;width:100%;}
 #menu ul li{display:inline-block;font-size:16px;vertical-align:middle;}
 #menu ul li a{font-size:16px;text-decoration:none}
@@ -58,6 +58,7 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:95
 .container article div.story-info p{font-size:13px;font-weight:bold;margin:0;padding:0;text-align:left}
 .container article div.story-bio{margin-bottom:5px;}
 .container article div.story-bio p{font-size:15px;margin-top:2px;padding:0;text-align:left}
+.container #signature{margin:0 auto;padding:0;margin-bottom:25px;width:50%}
 .container #post-form{margin:0 auto;padding:0;text-align:center;width:95%;}
 .container #post-form h1{font-weight:bold;font-size:35px}
 .container #post-form #social-login{width:100%;}
