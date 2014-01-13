@@ -12,7 +12,8 @@ var appController = function(app){
 	}
 
 	app.get('/test', function (req,res){
-		Post.find({})
+		//Post.find({})
+		Post.find().sort({ postdate : -1 })
 
 		.exec(function (err, posts){
 			var postJson = _.map(posts,function (post){
@@ -39,7 +40,7 @@ var appController = function(app){
 	});
 
 	app.post('/post-far',function (req,res){
-		debugger;
+		//debugger;
 		var post = new Post({
 			photo : req.body.picture,
 			usermail : req.body.email,

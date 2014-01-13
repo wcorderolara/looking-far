@@ -9,10 +9,8 @@ vendor-prefixes =  o ms moz webkit
 
 $texto =  #7f8c8d
 
-
 body
 	font-family Courier
-
 
 header
 	margin 0
@@ -42,30 +40,43 @@ header
 		padding 0
 		margin-top 8px
 		text-align center
-		width 90%
+		width 100%
 
 		li
 			color $texto
 			display inline-block
 			vertical-align middle
+
+			a
+				font-size 40px
+				text-decoration none
+
 			img
-				width 115px
+				width 140px
 
 				&.logo
 					width 195px
 			p
-				font-size 18px
+				font-size 14px
 	#divider
 		border-bottom 2px solid $texto
 		margin 0 auto
 		padding 0
-		width 95%
+		width 100%
+
+.fixed
+	background-color #FFF
+	width 100%
+	position fixed
+	top 0
+	left 40px
+	z-index 9999
 
 #menu
 	border-bottom 2px solid $texto
 	margin 0 auto
 	padding 0
-	width 90%
+	width 92.5%
 
 	ul
 		margin 0 auto
@@ -76,11 +87,11 @@ header
 
 		li
 			display inline-block
-			font-size 20px
+			font-size 16px
 			vertical-align middle
 
 			a
-				font-size 20px
+				font-size 16px
 				text-decoration none
 
 			a:hover
@@ -142,7 +153,7 @@ header
 
 .container
 	margin-top 15px
-	text-align justify
+	text-align left
 
 	#text
 		padding 50px 0 50px 0
@@ -190,9 +201,8 @@ header
 		figure, .far
 			display inline-block
 			vertical-align middle 
-		figure
-			
-			width 75px
+		figure		
+			width 55px
 
 		div.far
 			margin-left 2%
@@ -205,6 +215,7 @@ header
 			.fear,.aspiration,.regreat,.info
 				margin 0
 				padding 0
+				text-align left
 
 			.info
 				color #868686
@@ -267,8 +278,11 @@ header
 				padding 0
 				text-align left
 
-
-
+	#signature
+		margin 0 auto
+		padding 0
+		margin-bottom 25px
+		width 50%
 	#post-form
 		margin 0 auto
 		padding 0
@@ -394,7 +408,7 @@ footer
 						transition-timing-function ease-out
 						transition-duration 250ms
 		article
-			div.story-far, div.story-info, div.story-bio
+			div.story-far, div.story-info, div.story-bio, div.far
 				text-align left
 
 @media only screen and (min-width: 480px) and (max-width: 767px)
@@ -458,7 +472,7 @@ footer
 						transition-duration 250ms
 
 		article
-			div.story-far, div.story-info, div.story-bio
+			div.story-far, div.story-info, div.story-bio, div.far
 				text-align left
 
 
@@ -513,5 +527,6 @@ footer
 						transition-timing-function ease-out
 						transition-duration 250ms
 		article
-			div.story-far, div.story-info, div.story-bio
+			div.story-far, div.story-info, div.story-bio, div.far
 				text-align left
+
