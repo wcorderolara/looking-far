@@ -93,7 +93,7 @@ header ul li.hide.ballon{width:10%}
 header ul li.hide.dot p{font-size:10px;letter-spacing:-3px}
 header ul li img{width:100%;}
 header ul li img.logo{width:120px}
-.container{text-align:left;}
+.container{text-align:center;}
 .container img{width:100%}
 .container #text{padding:40px 0 40px 0;}
 .container #text h1,.container #text h2{font-size:90px;letter-spacing:10px}
@@ -108,7 +108,7 @@ header ul{text-align:center;width:90%;}
 header ul li img{width:70px;}
 header ul li img.logo{width:170px}
 header ul li p{font-size:13px;letter-spacing:-3px}
-.container{text-align:left;}
+.container{text-align:center;}
 .container img{width:100%}
 .container #text{padding:40px 0 40px 0;}
 .container #text h1,.container #text h2{font-size:90px;letter-spacing:10px}
