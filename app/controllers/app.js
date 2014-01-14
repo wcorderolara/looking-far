@@ -1,5 +1,6 @@
 var Post = require('../models/post'),
-	_ = require('underscore');
+	_ = require('underscore'),
+	fs = require('fs');
 
 var appController = function(app){
 	console.log('appController is load');
@@ -40,8 +41,27 @@ var appController = function(app){
 	});
 
 	app.post('/post-far',function (req,res){
-		//debugger;
-		var post = new Post({
+		
+		fs.readFile(req.body.photo, function (err, data){
+			//debugger;	
+			var imageName = req.body.photo;
+
+			if(!imageName){
+				console.log("There was an error");
+				res.redirect('/app');
+				res.end();
+			}else{
+				var newPath = __dirname + '../public/img/posts/' + imageName;
+
+				fs.writeFile(newPath, data, function (err){
+					console.log(newPath);
+					res.redirect('/');
+				})
+			}
+		});
+
+
+		/*var post = new Post({
 			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
@@ -58,7 +78,7 @@ var appController = function(app){
 				res.send(500, err);
 			}
 			res.redirect('/test');
-		});
+		});*/
 		//res.send('ya se puede publicar vamos falta poco');
 	})	
 };

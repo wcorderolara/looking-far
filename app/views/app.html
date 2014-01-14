@@ -53,7 +53,7 @@
 
 			<div id="social-login">
 				<a href="/auth/facebook" class="fb-login">[Sign in with Facebook]</a>
-				<a href="/auth/twitter" class="tw-login">[Sign in with twitter]</a>
+				<a href="/auth/twitter" class="tw-login">[Sign in with Twitter]</a>
 			</div>
 
 			<div id="login">
@@ -313,5 +313,13 @@
 {% endblock %}
 
 {% block scripts %}
-	
+	<script type="text/javascript">
+		$("#photo").on('change',function() {
+			var photo = $("#photo");
+			$("#picture").val(photo.val());
+			//pic.val() = $("#photo")
+			console.log( $('#picture').val() );
+		})
+
+	</script>
 {% endblock %}

@@ -2,7 +2,7 @@ var nodemailer = require('nodemailer');
 var error;
 
 var mailController = function (app){
-	console.log('mail Controller Application load');
+	console.log('mail Controller pAplication load');
 
 	app.post('/send-mail', function (req,res){
 		//debugger;
