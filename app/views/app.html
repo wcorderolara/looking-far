@@ -67,6 +67,7 @@
 						{% else %}
 							<label for="photo">photo: </label>
 							<input type="file" id="photo" name="photo">
+							<input type="hidden" id="picture" name="picture" value="">
 						{% endif %}
 					</span>
 
@@ -304,8 +305,8 @@
 						<textarea id="regreat" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
 					</span>
 
-					<button>Post!</button>
-					<button>Cancel!</button>
+					<button id="btnpost">Post!</button>
+					<button id="btnCancel">Cancel!</button>
 				</form>
 			</div>
 		</section>		
@@ -320,6 +321,14 @@
 			//pic.val() = $("#photo")
 			console.log( $('#picture').val() );
 		})
+
+		$("#btnpost").on('click',function(){
+			if($('#email').val() == ''){
+				alert("the email field don't be null");
+			}
+		})
+
+
 
 	</script>
 {% endblock %}

@@ -27,7 +27,7 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:10
 #social-menu #networks ul li{display:inline-block;vertical-align:middle;}
 #social-menu #networks ul li img{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;width:38px}
 #social-menu #networks ul li img:hover{cursor:pointer;-o-transform:scale(1.35,1.37);-ms-transform:scale(1.35,1.37);-moz-transform:scale(1.35,1.37);-webkit-transform:scale(1.35,1.37);-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;position:relative;z-index:99}
-#paypal-buy{margin:0 auto;padding:0;margin-top:-4.5%;text-align:center;width:50%}
+#paypal-buy{margin:0 auto;padding:0;text-align:left;position:relative;top:-80px;width:30%;z-index}
 .container{margin-top:15px;text-align:left;}
 .container #text{padding:50px 0 50px 0;text-align:center;}
 .container #text h1,.container #text h2{font-size:125px;letter-spacing:25px}
