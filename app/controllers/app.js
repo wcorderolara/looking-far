@@ -42,7 +42,7 @@ var appController = function(app){
 
 	app.post('/post-far',function (req,res){
 		
-		fs.readFile(req.body.photo, function (err, data){
+		/*fs.readFile(req.body.photo, function (err, data){
 			//debugger;	
 			var imageName = req.body.photo;
 
@@ -58,10 +58,10 @@ var appController = function(app){
 					res.redirect('/');
 				})
 			}
-		});
+		});*/
 
 
-		/*var post = new Post({
+		var post = new Post({
 			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
@@ -78,7 +78,7 @@ var appController = function(app){
 				res.send(500, err);
 			}
 			res.redirect('/test');
-		});*/
+		});
 		//res.send('ya se puede publicar vamos falta poco');
 	})	
 };
