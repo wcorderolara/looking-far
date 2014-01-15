@@ -41,9 +41,9 @@ var appController = function(app){
 			});	
 		}
 	});
-	//var multipartMiddleware = multipart();
+	//var multipartMiddleware = multipart(); ,multipartMiddleware
 
-	app.post('/post-far',multipartMiddleware,function (req,res){
+	app.post('/post-far',function (req,res){
 		/*debugger;	
 		fs.readFile(req.body.photo, function (err, data){
 			
