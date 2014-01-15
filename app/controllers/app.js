@@ -2,9 +2,11 @@ var Post = require('../models/post'),
 	_ = require('underscore'),
 	fs = require('fs');
 
+var multipart = require('connect-multiparty');
+
 var appController = function(app){
 	console.log('appController is load');
-	
+
 	var isLogged = function (req,res,nest){
 		if(!req.isAuthenticated()){
 			res.redirect('/test');
@@ -39,11 +41,14 @@ var appController = function(app){
 			});	
 		}
 	});
+	//var multipartMiddleware = multipart(); ,multipartMiddleware
 
 	app.post('/post-far',function (req,res){
+  		/*debugger;	
+		fs.readFile(req.body.photo, function (err, data){
+	
+		fs.readFile(req.body.photo, function (err, data){
 		
-		/*fs.readFile(req.body.photo, function (err, data){
-			debugger;	
 			var imageName = req.body.photo;
 
 			if(!imageName){
