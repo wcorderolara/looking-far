@@ -42,8 +42,8 @@ var appController = function(app){
 
 	app.post('/post-far',function (req,res){
 		
-		fs.readFile(req.body.photo, function (err, data){
-			/*debugger;	
+		/*fs.readFile(req.body.photo, function (err, data){
+			debugger;	
 			var imageName = req.body.photo;
 
 			if(!imageName){
@@ -57,8 +57,8 @@ var appController = function(app){
 					console.log(newPath);
 					res.redirect('/');
 				})
-			}*/
-		});
+			}
+		});*/
 
 
 		var post = new Post({
