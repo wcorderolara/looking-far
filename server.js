@@ -25,7 +25,6 @@ app.set('views', './app/views');
 app.configure(function(){
 	//Static files load
 	app.use(express.static('./public'));
-	
 	app.set('view cache', false);
 	app.use(express.logger());
 	app.use(express.cookieParser());
