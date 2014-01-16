@@ -19,7 +19,8 @@ var postSchema = Schema({
 	userfear : {type: String},
 	useraspiration : {type: String},
 	userregreat : {type: String},
-	postdate : {type: Date, default: Date.now}
+	postdate : {type: Date, default: Date.now},
+    socialog : {type: Number}
 });
 
 function randomHash(str) {

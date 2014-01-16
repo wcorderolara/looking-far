@@ -22,7 +22,7 @@ var facebookConnection = function (app){
 
 	app.get('/auth/facebook/callback',
 			passport.authenticate('facebook', {
-				successRedirect : '/app',
+				successRedirect : '/app-social',
 				failureRedirect : '/'
 			}));
 
