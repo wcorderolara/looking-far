@@ -30,21 +30,21 @@ var appController = function(app){
 		});
 	});
 
-	app.get('/app', function (req,res){
+
+	//POST SOCIAL LOG IN
+
+	app.get('/app-social', function (req,res){
 		if(!req.isAuthenticated()){
 			res.render('app');
 		}else{
-			//debugger;
-			res.render('app',{
-				login : true,
-				user : req.session.passport.user.displayName,
-				picture : req.session.passport.user.photos[0].value
-			});	
+			res.render('app-social',{
+				user 	: req.session.passport.user.displayName,
+				picture	: req.session.passport.user.photos[0].value
+			});
 		}
 	});
 
-	app.post('/post-far', multipartMiddleware, function (req,res){
-
+	app.post('/social-post-far', function (req,res){
 		var post = new Post({
 			usermail : req.body.email,
 			username : req.body.name,
@@ -53,7 +53,50 @@ var appController = function(app){
 			usercountry : req.body.country,
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
-			userregreat : req.body.regreat
+			userregreat : req.body.regreat,
+			socialog : 1
+		});
+
+		post.save(function (err) {
+            if (err) {
+                console.log(err);
+                res.send(500);
+                return;
+            }else{
+            	res.redirect('/test');
+            }
+        });
+	});
+
+	//POST NORMAL
+
+	app.get('/app', function (req,res){
+		res.render('app');
+		/*if(!req.isAuthenticated()){
+			res.render('app');
+		}else{
+			//debugger;
+			res.render('app',{
+				login : true,
+				user : req.session.passport.user.displayName,
+				picture : req.session.passport.user.photos[0].value
+			});	
+		}*/
+	});
+
+	app.post('/post-far', multipartMiddleware, function (req,res){
+
+		var post = new Post({
+			photo : req.body.picture
+			usermail : req.body.email,
+			username : req.body.name,
+			userage : parseInt(req.body.age),
+			usercity : req.body.city,
+			usercountry : req.body.country,
+			userfear : req.body.fear,
+			useraspiration : req.body.aspiration,
+			userregreat : req.body.regreat,
+			socialog : 0
 		});
 
         post.save(function (err) {
@@ -68,7 +111,6 @@ var appController = function(app){
                     res.send(500);
                     return;
                 }
-                
                 res.redirect('/test');
             });
         });

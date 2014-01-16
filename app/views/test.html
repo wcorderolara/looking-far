@@ -48,7 +48,11 @@
 		{% for post in posts %}
 			<article class="sixteen columns">
 				<figure>
-					<img class="img-post" src="{{ post.photo }}" alt="" title="">
+					{% if post.socialog == 1 %}
+						<img class="img-post" src="{{ post.photo }}" alt="" title="">
+					{% else %}
+						<img class="img-post" src="/img/posts/{{ post.photo }}" alt="" title="">
+					{% endif %}
 				</figure>
 				<div class="far">
 					<p class="fear">

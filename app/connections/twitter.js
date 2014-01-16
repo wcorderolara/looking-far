@@ -35,7 +35,7 @@ var twitterConnection = function (app){
 	app.get('/auth/twitter', passport.authenticate('twitter'));
 
 	app.get('/auth/twitter/callback', passport.authenticate('twitter',
-		{ successRedirect: '/app', failureRedirect: '/?error=something-happend' }));
+		{ successRedirect: '/app-social', failureRedirect: '/?error=something-happend' }));
 };
 
 module.exports = twitterConnection;
