@@ -38,6 +38,7 @@ var appController = function(app){
 			res.render('app');
 		}else{
 			res.render('app-social',{
+				login : true,
 				user 	: req.session.passport.user.displayName,
 				picture	: req.session.passport.user.photos[0].value
 			});
