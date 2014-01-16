@@ -2,15 +2,18 @@ var Post = require('../models/post'),
 	_ = require('underscore'),
 	fs = require('fs');
 
+var multipart           = require('connect-multiparty');
+var multipartMiddleware = multipart();
+
 var appController = function(app){
 	console.log('appController is load');
-	
+
 	var isLogged = function (req,res,nest){
 		if(!req.isAuthenticated()){
 			res.redirect('/test');
 			return;
 		}
-	}
+	};
 
 	app.get('/test', function (req,res){
 		//Post.find({})
@@ -40,29 +43,9 @@ var appController = function(app){
 		}
 	});
 
-	app.post('/post-far',function (req,res){
-		
-		fs.readFile(req.body.photo, function (err, data){
-			/*debugger;	
-			var imageName = req.body.photo;
-
-			if(!imageName){
-				console.log("There was an error");
-				res.redirect('/app');
-				res.end();
-			}else{
-				var newPath = __dirname + '/posts/' + imageName;
-
-				fs.writeFile(newPath, data, function (err){
-					console.log(newPath);
-					res.redirect('/');
-				})
-			}*/
-		});
-
+	app.post('/post-far', multipartMiddleware, function (req,res){
 
 		var post = new Post({
-			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
 			userage : parseInt(req.body.age),
@@ -73,14 +56,23 @@ var appController = function(app){
 			userregreat : req.body.regreat
 		});
 
-		post.save(function(err){
-			if(err){
-				res.send(500, err);
-			}
-			res.redirect('/test');
-		});
-		//res.send('ya se puede publicar vamos falta poco');
-	})	
+        post.save(function (err) {
+            if (err) {
+                console.log(err);
+                res.send(500);
+                return;
+            }
+
+            post.uploadImage(req.files.photo, function (err) {
+                if (err) {
+                    res.send(500);
+                    return;
+                }
+                
+                res.redirect('/test');
+            });
+        });
+	});
 };
 
 module.exports = appController;
