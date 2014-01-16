@@ -45,7 +45,8 @@ var appController = function(app){
 	});
 
 	app.post('/social-post-far', function (req,res){
-		var post = new Post({
+		var social = new Post({
+			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
 			userage : parseInt(req.body.age),
@@ -54,10 +55,10 @@ var appController = function(app){
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : 1
+			socialog : parseInt("1")
 		});
 
-		post.save(function (err) {
+		social.save(function (err) {
             if (err) {
                 console.log(err);
                 res.send(500);
@@ -87,7 +88,6 @@ var appController = function(app){
 	app.post('/post-far', multipartMiddleware, function (req,res){
 
 		var post = new Post({
-			photo : req.body.picture
 			usermail : req.body.email,
 			username : req.body.name,
 			userage : parseInt(req.body.age),
@@ -96,7 +96,7 @@ var appController = function(app){
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : 0
+			socialog : parseInt("0")
 		});
 
         post.save(function (err) {
