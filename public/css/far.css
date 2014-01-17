@@ -6,9 +6,9 @@ header img:hover{filter:grayscale(0%);-webkit-filter:grayscale(0%);-moz-filter:g
 header ul{margin:0 auto;padding:0;margin-top:8px;text-align:center;width:100%;}
 header ul li{color:#7f8c8d;display:inline-block;vertical-align:middle;}
 header ul li a{font-size:40px;text-decoration:none}
-header ul li img{width:140px;}
+header ul li img{width:130px;}
 header ul li img.logo{width:195px}
-header ul li p{font-size:14px}
+header ul li p{font-size:10px}
 header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:100%}
 .fixed{background-color:#fff;width:100%;position:fixed;top:0;left:40px;z-index:9999}
 #menu{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:92.5%;}
@@ -37,7 +37,7 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:10
 .container #social ul li{display:inline-block;vertical-align:middle;width:30%;}
 .container #social ul li img{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;width:90px}
 .container #social ul li img:hover{cursor:pointer;-o-transform:scale(1.35,1.37);-ms-transform:scale(1.35,1.37);-moz-transform:scale(1.35,1.37);-webkit-transform:scale(1.35,1.37);-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;position:relative;z-index:99}
-.container article{padding-bottom:15px;}
+.container article{margin:0 auto;padding:0;padding-bottom:15px;width:90%;}
 .container article img,.container article img.img-post{width:100%}
 .container article img.img-post{-webkit-border-radius:45px}
 .container article figure,.container article .far{display:inline-block;vertical-align:middle}
@@ -70,9 +70,10 @@ header #divider{border-bottom:2px solid #7f8c8d;margin:0 auto;padding:0;width:10
 .container #post-form #social-login a.tw-login{color:#31b6e3}
 .container #post-form #login{margin:0 auto;padding:0;padding-top:25px;width:65%;}
 .container #post-form #login img{width:100%}
-.container #post-form #login span{margin:0;padding:0;width:100%;}
+.container #post-form #login span{display:block;margin:0;padding:0;margin-top:8px;width:100%;}
 .container #post-form #login span img,.container #post-form #login span p{display:inline-block;vertical-align:top}
-.container #post-form #login span img{width:25px}
+.container #post-form #login span img{width:60px}
+.container #post-form #login span #img-mail{width:25px}
 .container #post-form #login span p{font-weight:bold}
 .container #post-form #login span label,.container #post-form #login span input,.container #post-form #login span textarea,.container #post-form #login span select{color:#000;display:inline-block;font-size:15px;margin:0;padding:0;margin-bottom:8px;padding:5px 0 5px 0;vertical-align:top}
 .container #post-form #login span label{font-size:15px;font-weight:bold;text-align:right;width:18%}
@@ -83,26 +84,51 @@ footer ul{margin:0 auto;padding:0;margin-top:8px;text-align:center;width:90%;}
 footer ul li{display:inline-block;font-size:15px;vertical-align:top;}
 footer ul li a{text-decoration:none}
 footer ul li a:hover{font-weight:bold}
-@media only screen and (max-width: 479px){header ul li.hide{display:none}
-.container{text-align:center;}
+@media only screen and (max-width: 479px){header{margin-top:15px;}
+header ul li.hide{display:none}
+.fixed{background-color:#fff;width:100%;position:fixed;top:0;left:15px;z-index:9999}
+#social-menu{margin-top:5px;margin-bottom:0;padding-bottom:0;}
+#social-menu #networks{width:90%;}
+#social-menu #networks ul{width:100%;}
+#social-menu #networks ul li{display:inline-block;vertical-align:middle;}
+#social-menu #networks ul li img{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;width:40px}
+#social-menu #networks ul li img:hover{cursor:pointer;-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;position:relative;z-index:99}
+.container{float:none;width:100%;padding-bottom:20px;text-align:center;}
 .container img{width:100%}
-.container #text{padding:40px 0 40px 0;}
-.container #text h1,.container #text h2{font-size:60px;letter-spacing:10px}
-.container #text h2{padding-top:25px}
-.container #social{margin-top:45px;}
-.container #social ul{width:100%;}
-.container #social ul li img{width:64px}
-.container #social ul li img:hover{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms}
-.container article{text-align:left;}
+.container article{display:block;float:none;border:5px solid transparent;padding-top:5px;padding-bottom:5px;width:90%;position:relative;}
+.container article p.text-about{text-align:left}
+.container article figure{width:65px}
 .container article div.story-far,.container article div.story-info,.container article div.story-bio,.container article div.far{text-align:left}
-}@media only screen and (min-width: 480px) and (max-width: 767px){header img{cursor:pointer;filter:grayscale(0%);-webkit-filter:grayscale(0%);-moz-filter:grayscale(0%);-ms-filter:grayscale(0%);-o-filter:grayscale(0%);-o-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-webkit-transition:all 0.5s ease;width:100%}
-header ul{text-align:center;width:90%;}
+.container article div.far p.fear,.container article div.far p.aspiration,.container article div.far p.regreat{font-size:16px;padding-top:5px}
+.container article div.far p.info{font-size:13px;padding-top:5px}
+.container #post-form h1{font-size:25px;text-align:left;width:100%}
+.container #post-form #login{width:100%;}
+.container #post-form #login form span{display:block;margin-bottom:5px;width:100%;}
+.container #post-form #login form span img{width:50px}
+.container #post-form #login form span #img-mail{width:30px}
+.container #post-form #login form span label{font-size:13px;text-align:left}
+footer{margin:0;padding:0;width:100%;}
+footer ul{margin:0 auto;padding:0;margin-top:8px;text-align:center;width:90%;}
+footer ul li{display:inline-block;font-size:15px;vertical-align:top;}
+footer ul li a{text-decoration:none}
+footer ul li a:hover{font-weight:bold}
+footer ul li.separate{display:none}
+footer ul li.link{display:inline-block;margin-top:5px;text-align:center;vertical-align:middle;width:40%}
+}@media only screen and (min-width: 480px) and (max-width: 767px){header{margin-top:15px;}
+header img{cursor:pointer;filter:grayscale(0%);-webkit-filter:grayscale(0%);-moz-filter:grayscale(0%);-ms-filter:grayscale(0%);-o-filter:grayscale(0%);-o-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-webkit-transition:all 0.5s ease;width:100%}
 header ul li.hide{text-align:center;}
-header ul li.hide.ballon{width:10%}
-header ul li.hide.dot p{font-size:10px;letter-spacing:-3px}
-header ul li img{width:100%;}
-header ul li img.logo{width:120px}
-.container{text-align:center;}
+header ul li.hide.ballon{margin:0;padding:0;width:10%}
+header ul li.hide.dot p{display:none}
+header ul li a{font-size:180%}
+header ul li img{width:80%}
+.fixed{background-color:#fff;width:100%;position:fixed;top:0;left:25px;z-index:9999}
+#social-menu{margin-top:5px;margin-bottom:0;padding-bottom:0;}
+#social-menu #networks{width:90%;}
+#social-menu #networks ul{width:100%;}
+#social-menu #networks ul li{display:inline-block;vertical-align:middle;}
+#social-menu #networks ul li img{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;width:40px}
+#social-menu #networks ul li img:hover{cursor:pointer;-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms;position:relative;z-index:99}
+.container{float:none;width:100%;padding-bottom:20px;text-align:center;}
 .container img{width:100%}
 .container #text{padding:40px 0 40px 0;}
 .container #text h1,.container #text h2{font-size:90px;letter-spacing:10px}
@@ -111,8 +137,20 @@ header ul li img.logo{width:120px}
 .container #social ul{width:100%;}
 .container #social ul li img{width:64px}
 .container #social ul li img:hover{-o-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-duration:250ms;-ms-transition-duration:250ms;-moz-transition-duration:250ms;-webkit-transition-duration:250ms}
-.container article{text-align:left;}
+.container article{display:block;float:none;border:5px solid transparent;padding-top:5px;padding-bottom:5px;width:90%;position:relative;}
+.container article p.text-about{text-align:left;width:100%}
+.container article figure{width:50px}
 .container article div.story-far,.container article div.story-info,.container article div.story-bio,.container article div.far{text-align:left}
+.container article div.far p.fear,.container article div.far p.aspiration,.container article div.far p.regreat{font-size:14px;padding-top:1px}
+.container article div.far p.info{font-size:12px;padding-top:2px}
+.container #signature{margin:0 auto;padding:0;margin-bottom:15px;text-alignwidth:50%;}
+.container #signature img{width:70%}
+.container #post-form h1{font-size:25px;margin:0 auto;padding:0;text-align:left;width:90%}
+.container #post-form #login{width:90%;}
+.container #post-form #login form span{display:block;margin-bottom:5px;width:100%;}
+.container #post-form #login form span img{width:50px}
+.container #post-form #login form span #img-mail{width:30px}
+.container #post-form #login form span label{font-size:14px;text-align:left}
 }@media only screen and (min-width: 768px) and (max-width: 959px){header img{cursor:pointer;filter:grayscale(0%);-webkit-filter:grayscale(0%);-moz-filter:grayscale(0%);-ms-filter:grayscale(0%);-o-filter:grayscale(0%);-o-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-webkit-transition:all 0.5s ease;width:100%}
 header ul{text-align:center;width:90%;}
 header ul li img{width:70px;}

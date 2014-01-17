@@ -7,8 +7,8 @@ var facebookConnection = function (app){
 	passport.use(new FacebookStrategy({
 			clientID: '340114766126931',
 			clientSecret : 'd133267b60216f70fe252e2c630c601b',
-			callbackURL: 'http://looking-far.com/auth/facebook/callback',
-			//callbackURL: 'http://127.0.0.1:3000/auth/facebook/callback',
+			//callbackURL: 'http://looking-far.com/auth/facebook/callback',
+			callbackURL: 'http://127.0.0.1:3000/auth/facebook/callback',
 			profileFields: ['id','displayName','photos']
 		},
 
