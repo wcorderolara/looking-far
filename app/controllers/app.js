@@ -45,24 +45,28 @@ var appController = function(app){
 		}
 	});
 
-	app.post('/social-post-far', function (req,res){
+	app.post('/social-post', function (req,res){
+		console.log('doing request');
+		console.log(req.body);
+
 		var social = new Post({
 			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
-			userage : parseInt(req.body.age),
+			userage : parseInt(req.body.age, 10),
 			usercity : req.body.city,
 			usercountry : req.body.country,
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : parseInt("1")
+			socialog : 1
 		});
 
 		social.save(function (err) {
             if (err) {
+            	console.log('error');
                 console.log(err);
-                res.send(500);
+                //res.send(500);
                 return;
             }else{
             	res.redirect('/test');
@@ -87,7 +91,7 @@ var appController = function(app){
 	});
 
 	app.post('/post-far', multipartMiddleware, function (req,res){
-
+		//debugger;
 		var post = new Post({
 			usermail : req.body.email,
 			username : req.body.name,
@@ -97,10 +101,12 @@ var appController = function(app){
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : parseInt("0")
+			socialog : 0
 		});
 
+		
         post.save(function (err) {
+        	//debugger;
             if (err) {
                 console.log(err);
                 res.send(500);
@@ -112,9 +118,11 @@ var appController = function(app){
                     res.send(500);
                     return;
                 }
-                res.redirect('/test');
+                
             });
+
         });
+        res.redirect('/test');
 	});
 };
 

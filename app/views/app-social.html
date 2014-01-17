@@ -27,7 +27,7 @@
 				<p>. . .</p>
 			</li>
 			<li>
-				<a href="/test">[ looking<strong>FAR</strong> ]</a>
+				<a href="/test">[looking<strong>FAR</strong>]</a>
 			</li>
 			<li class="hide dot">
 				<p>. . .</p>
@@ -49,7 +49,7 @@
 	
 	<section class="container">
 		<section id="post-form">
-			<h1>Post your Looking[FAR] here:</h1>
+			<h1>Post your [FAR] here:</h1>
 
 			<div id="social-login">
 				<a href="/auth/facebook" class="fb-login">[Sign in with Facebook]</a>
@@ -57,17 +57,18 @@
 			</div>
 
 			<div id="login">
-				<form action="/social-post-far" method="post" enctype="multipart/form-data">
+				<form action="/social-post" method="post">
 					
 					<span>
 						{% if login %}
-							<img src="{{ picture }}" alt="">
+							<label for="photo">photo: </label>
+							<img id="photo" src="{{ picture }}" alt="">
 							<input type="hidden" id="picture" name="picture" value="{{ picture }}">
 						{% else %}
 							<input type="hidden" id="picture" name="picture" value="">
 						{% endif %}
 					</span>
-
+					
 					<span>
 						<label for="email">email: </label>
 						<input type="text" id="email" name="email">
@@ -84,7 +85,7 @@
 					</span>
 					<span>
 						<label for="age">age: </label>
-						<input type="text" id="age" name="age">
+						<input type="text" id="age" name="age" onkeypress="return soloNumeros(event);">
 					</span>
 					
 					<span>
@@ -302,7 +303,7 @@
 						<textarea id="regreat" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
 					</span>
 
-					<button id="btnpost">Post!</button>
+					<button id="btnpost" type="submit">Post!</button>
 					<!--button id="btnCancel">Cancel!</button-->
 				</form>
 			</div>
