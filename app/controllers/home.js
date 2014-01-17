@@ -115,6 +115,10 @@ var homeController =  function (app){
 	});
 	//end contact block
 
+	app.get('/stories', function (req,res){
+		res.render('stories');
+	});
+
 	app.get('/auth/facebook', passport.authenticate( 'facebook', { scope:'read_stream' } ) );
 
 	app.post('/log-in', function (req, res){

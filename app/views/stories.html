@@ -1,0 +1,150 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/far.css">
+{% endblock %}
+
+{%block header %}
+	<header>
+		<ul>
+			<li class="hide ballon">
+				<a href="/kid"><img src="/img/ballons/Esfera5.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/wilton"><img src="/img/ballons/Esfera16.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li>
+				<a href="/test">[looking<strong>FAR</strong>]</a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/danielle"><img src="/img/ballons/Esfera10.png" title="" alt=""></a>
+			</li>
+			<li class="hide dot">
+				<p>. . .</p>
+			</li>
+			<li class="hide ballon">
+				<a href="/airmen"><img src="/img/ballons/Esfera8.png" title="" alt=""></a>
+			</li>
+		</ul>
+	</header>
+{% endblock %}
+
+{% block container %}
+	
+	<section id="posts" class="container">
+
+		<section id="stories">
+			<article>
+				<figure><a href="/maria"><img src="/img/ballons/Esfera1.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/lee"><img src="/img/ballons/Esfera2.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/josette"><img src="/img/ballons/Esfera3.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/victor"><img src="/img/ballons/Esfera4.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/kid"><img src="/img/ballons/Esfera5.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/jake"><img src="/img/ballons/Esfera6.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/brett"><img src="/img/ballons/Esfera7.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/airmen"><img src="/img/ballons/Esfera8.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/wesley"><img src="/img/ballons/Esfera9.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/danielle"><img src="/img/ballons/Esfera10.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/nolane"><img src="/img/ballons/Esfera11.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/lindsay"><img src="/img/ballons/Esfera12.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/laura"><img src="/img/ballons/Esfera13.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/steve"><img src="/img/ballons/Esfera14.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+			<article>
+				<figure><a href="/jennifer"><img src="/img/ballons/Esfera15.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+			
+			<article>
+				<figure><a href="/wilton"><img src="/img/ballons/Esfera16.png" alt="watch my FAR" title="watch my FAR"></a></figure>
+			</article>
+
+		</section>
+		
+		{% for post in posts %}
+			<article>
+				<figure>
+					{% if post.socialog == 1 %}
+						<img class="img-post" src="{{ post.photo }}" alt="" title="">
+					{% else %}
+						<img class="img-post" src="/img/posts/{{ post.photo }}" alt="" title="">
+					{% endif %}
+				</figure>
+				<div class="far">
+					<p class="fear">
+						<strong>F:</strong> {{ post.userfear }}
+					</p>
+					<p class="aspiration">
+						<strong>A:</strong> {{ post.useraspiration }}
+					</p>
+					<p class="regreat">
+						<strong>R:</strong> {{ post.userregreat }}
+					</p>
+					<p class="info">{{post.username}}, {{ post.userage }} years, {{post.usercity}}, {{post.usercountry}}</p>
+				</div>
+				<div class="share">
+					<ul>
+						<li><a class="share-facebook">share on Facebook</a></li>
+						<li><a class="share-twitter">share on Twitter</a> </li>
+					</ul>
+				</div>
+			</article>
+		{% endfor %}
+
+	</section><!-- container -->
+{% endblock %}
+
+{% block scripts %}
+		
+{% endblock %}

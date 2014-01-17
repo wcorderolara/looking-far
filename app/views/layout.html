@@ -18,7 +18,12 @@
 <body>
 	{% block header %}{% endblock %}
 
-	<section id="menu">
+	<nav id="menu">
+		<div id="pull">
+			<a href="#">Menu</a>	
+			<img id="pull-menu" src="/img/icon-menu.png" alt="" title="">
+		</div>
+
 		<ul>
 			<li><a href="/app">post your <strong>FAR</strong></a></li>
 			<li class="separate">|</li>
@@ -27,8 +32,10 @@
 			<li><a href="/buy">buy the book</a></li>
 			<li class="separate">|</li>
 			<li><a href="/connections">connections</a></li>
+			<li class="stories"><a href="/stories">see stories</a></li>
 		</ul>
-	</section>
+		
+	</nav>
 
 	<!--{% block social-menu %}{% endblock %}-->
 	<section id="social-menu">
