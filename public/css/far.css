@@ -269,7 +269,7 @@ z-index
   width: 100%;
 }
 .container article img.img-post {
-  -webkit-border-radius: 25px;
+  -webkit-border-radius: 35px;
 }
 .container article figure,
 .container article .far {
@@ -1113,6 +1113,17 @@ footer ul li a:hover {
   }
   .container img {
     width: 100%;
+  }
+  .container #text {
+    padding: 40px 0 40px 0;
+  }
+  .container #text h1,
+  .container #text h2 {
+    font-size: 60px;
+    letter-spacing: 10px;
+  }
+  .container #text h2 {
+    padding-top: 25px;
   }
   .container article {
     display: block;
