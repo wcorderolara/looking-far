@@ -269,7 +269,7 @@ z-index
   width: 100%;
 }
 .container article img.img-post {
-  -webkit-border-radius: 45px;
+  -webkit-border-radius: 25px;
 }
 .container article figure,
 .container article .far {
