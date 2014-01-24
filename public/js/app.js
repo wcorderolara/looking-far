@@ -1,5 +1,6 @@
 var sticky = document.querySelector('#menu');
-var origOffsetY = sticky.offsetTop;
+//var origOffsetY = sticky.offsetTop;
+var origOffsetY = 240;
 
 function onScroll(e) {
   window.scrollY >= origOffsetY ? sticky.classList.add('fixed') :

@@ -3,6 +3,8 @@ var models = require('./models'),
     path   = require('path'),
     crypto = require('crypto'),
     format = require('util').format,
+    magick = require('imagemagick'),
+    easyimg = require('easyimage'),
 	Schema = models.Schema;
 
 
@@ -34,6 +36,7 @@ postSchema.methods.uploadImage = function (imageObj, next) {
     var nameImage = randomHash([doc.get('name'), imageObj.name].join(''));
     nameImage     = format('%s.%s', nameImage, type);
     var dest      = path.join(DIR_STATIC_IMAGE, nameImage);
+    var newImage  = imageObj;
 
     move(imageObj.path, dest, function (err) {
         if ( err ) { return next(err); }
