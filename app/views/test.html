@@ -44,7 +44,38 @@
 {% block container %}
 	
 	<section id="posts" class="container">
-		
+			<section id="post-far">
+				<div id="fig">
+					<figure>
+						<img src="">
+					</figure>
+				</div>
+				<div>
+					<ul>
+						<li> <a href="/auth/facebook"><img src="/img/networks/facebook.png"></a></li>
+						<li> <a href="/auth/twitter"><img src="/img/networks/twitter.png"></a> </li>
+					</ul>
+					<form action="/post-far" method="post">
+						<span>
+							<label for="fear"><strong>F:</strong></label>
+							<input type="text" id="fear" name="fear" maxlength="140" placeholder="your fear" />
+						</span>
+
+						<span>
+							<label for="aspiration"><strong>A:</strong></label>
+							<input type="text" id="aspiration" name="aspiration" maxlength="140" placeholder="your aspiration" />
+						</span>
+
+						<span>
+							<label for="regret"><strong>R:</strong></label>
+							<input type="text" id="regret" name="regret" maxlength="140" placeholder="your regret" />
+						</span>
+
+						<button id="btnpost" type="submit">Post!</button>
+
+					</form>
+				</div>
+			</section>
 		{% for post in posts %}
 			<article>
 				<figure>

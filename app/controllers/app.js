@@ -112,7 +112,7 @@ var appController = function(app){
                 res.send(500);
                 return;
             }
-
+            debugger;
             post.uploadImage(req.files.photo, function (err) {
                 if (err) {
                     res.send(500);

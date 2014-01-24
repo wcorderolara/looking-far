@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
 	<link rel="stylesheet" type="text/css" href="/css/far.css">
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
-	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<!--script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script-->
 	<script type="text/javascript" src="/js/main.js"></script>
 {% endblock %}
 
@@ -60,15 +60,10 @@
 				<form action="/post-far" method="post" enctype="multipart/form-data">
 					
 					<span>
-						{% if login %}
-							<label for="photo">photo: </label>
-							<input type="file" id="photo" name="photo" value="{{ picture }}">
-							<input type="hidden" id="picture" name="picture" value="{{ picture }}">
-						{% else %}
-							<label for="photo">photo: </label>
-							<input type="file" id="photo" name="photo">
-							<input type="hidden" id="picture" name="picture" value="">
-						{% endif %}
+						<label for="photo">photo: </label>
+						<input type="file" id="photo" name="photo">
+						<p>file size lower or equals than 500kb.</p>
+						<input type="hidden" id="picture" name="picture" value="">
 					</span>
 
 					<span>
@@ -77,13 +72,8 @@
 					</span>
 					
 					<span>
-						{% if login %}
-							<label for="name">name: </label>
-							<input type="text" id="name" name="name" value="{{ user }}">
-						{% else %}
-							<label for="name">name: </label>
-							<input type="text" id="name" name="name">
-						{% endif %}
+						<label for="name">name: </label>
+						<input type="text" id="name" name="name">
 					</span>
 					<span>
 						<label for="age">age: </label>
@@ -301,7 +291,7 @@
 						<textarea id="aspiration" name="aspiration" rows="2" cols="50" maxlength="140"></textarea>
 					</span>
 					<span>
-						<label for="regreat">regreat: </label>
+						<label for="regreat">regret: </label>
 						<textarea id="regreat" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
 					</span>
 
