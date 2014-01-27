@@ -12,6 +12,7 @@ var models = require('./models'),
 var DIR_STATIC_IMAGE = path.join(__dirname, '../../public/img/posts/');
 
 var postSchema = Schema({
+    id       : {type: String},
 	photo    : {type: String},
 	usermail : {type: String, unique: true},
 	username : {type: String},
@@ -22,7 +23,8 @@ var postSchema = Schema({
 	useraspiration : {type: String},
 	userregreat : {type: String},
 	postdate : {type: Date, default: Date.now},
-    socialog : {type: Number}
+    socialog : {type: Number},
+    postActive : {type: Number}
 });
 
 function randomHash(str) {

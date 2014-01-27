@@ -3,25 +3,6 @@ var passport = require('passport');
 var homeController =  function (app){
 	console.log("homeController load");
 
-	//var isntLoggedIn = function (req, res, next){
-		//debugger;
-		//if(!req.session.user){
-		//	res.redirect('/');
-		//	return;
-		//}
-
-		//next();
-	//};
-
-	/*var isLoggedIn = function (req, res, next){
-		if(req.session.user){
-			res.redirect('/app');
-			return;
-		}
-
-		next();
-	};*/
-
 	app.get('/', function (req, res){
 		res.render('index');
 	});

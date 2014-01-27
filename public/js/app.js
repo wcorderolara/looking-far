@@ -20,3 +20,20 @@ $('#pull-menu').on('click', function(e){
 	e.preventDefault();
 	$("#menu ul").slideToggle();
 })
+
+
+function removePost(postId){
+	debugger;
+	var xhr = $.ajax({
+		type : 'PUT',
+		url : '/panel/delete/' + postId,
+		async : true,
+		crossDomain : true
+	});
+
+	xhr.done(function(){
+		alert("the post has been deleted");
+	})
+
+	location.reload();
+}
