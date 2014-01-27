@@ -202,9 +202,9 @@ z-index
   text-align: left;
 }
 
-
 .container #text {
   padding: 50px 0 50px 0;
+  height: auto;
   text-align: center;
 }
 .container #text h1,
@@ -215,6 +215,12 @@ z-index
 .container #text h2 {
   padding-top: 75px;
 }
+
+.container #text #buy-book img{
+  height: auto;
+  width: 100%
+}
+
 .container #social {
   margin-top: 45px;
   text-align: center;
@@ -271,6 +277,10 @@ z-index
   padding-bottom: 15px;
 }
 
+.container article .hero img{
+  height: auto;
+  width: 100%;
+}
 .container article img,
 .container article img.img-post {
 

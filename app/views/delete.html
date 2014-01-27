@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Looking FAR is a Photo-Journalism book that asks what are your greatest Fears, Aspirations and Regrets.">
+	<meta name="author" content="viviano">
+
+	<title>{% block title %} looking[FAR] {% endblock %} </title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/far.css">
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<link rel="apple-touch-icon" href="/img/favicon.png">
+</head>
+<body>
+	<nav id="menu">
+		<div id="pull">
+			<a href="#">Menu</a>	
+			<img id="pull-menu" src="/img/icon-menu.png" alt="" title="">
+		</div>
+
+		<ul>
+			<li><a href="/panel">Administration Panel</a></li>
+			<li class="separate">|</li>
+			<li><a href="/test">looking <strong>FAR</strong></a></li>
+		</ul>
+	</nav>
+	<section id="panel" class="container">
+		
+		{% for post in posts %}
+			<article>
+				<figure>
+					{% if post.socialog == 1 %}
+						<img class="img-post" src="{{ post.photo }}" alt="" title="">
+					{% else %}
+						<img class="img-post" src="/img/posts/{{ post.photo }}" alt="" title="">
+					{% endif %}
+				</figure>
+				<div class="far">
+					<p class="fear">
+						<strong>F:</strong> {{ post.userfear }}
+					</p>
+					<p class="aspiration">
+						<strong>A:</strong> {{ post.useraspiration }}
+					</p>
+					<p class="regreat">
+						<strong>R:</strong> {{ post.userregreat }}
+					</p>
+					<p class="info">{{post.username}}, {{ post.userage }} years, {{post.usercity}}, {{post.usercountry}}</p>
+				</div>
+				<div class="buttons">
+					<input type='button' value='remove Post!' onclick='removePost("{{post.id}}")'>
+				</div>
+			</article>
+		{% endfor %}
+
+	</section>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	
+</body>
+</html>

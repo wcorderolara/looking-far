@@ -1,6 +1,7 @@
 var Post = require('../models/post'),
-	_ = require('underscore'),
-	fs = require('fs');
+	_    = require('underscore'),
+	uuid = require('uuid'),
+	fs   = require('fs');
 
 var multipart           = require('connect-multiparty');
 var multipartMiddleware = multipart();
@@ -50,6 +51,7 @@ var appController = function(app){
 		console.log(req.body);
 
 		var social = new Post({
+			id : uuid.v1(),
 			photo : req.body.picture,
 			usermail : req.body.email,
 			username : req.body.name,
@@ -59,7 +61,8 @@ var appController = function(app){
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : 1
+			socialog : 1,
+			postActive : 1
 		});
 
 		social.save(function (err) {
@@ -93,6 +96,7 @@ var appController = function(app){
 	app.post('/post-far', multipartMiddleware, function (req,res){
 		//debugger;
 		var post = new Post({
+			id : uuid.v1(),
 			usermail : req.body.email,
 			username : req.body.name,
 			userage : parseInt(req.body.age),
@@ -101,7 +105,8 @@ var appController = function(app){
 			userfear : req.body.fear,
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
-			socialog : 0
+			socialog : 0,
+			postActive : 1
 		});
 
 		
