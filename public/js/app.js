@@ -37,3 +37,10 @@ function removePost(postId){
 
 	location.reload();
 }
+
+
+$(document).ready(function(){
+	for(var x = 1; x <= 100; x++){
+		$("<option value = " + x + ">" + x + "</option>").appendTo("#age");
+	}
+})

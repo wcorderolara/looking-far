@@ -44,18 +44,19 @@
 {% block container %}
 	
 	<section id="posts" class="container">
-			<!--section id="post-far">
-				<div id="fig">
+			<section id="post-far">
+				<!--div id="fig">
 					<figure>
 						<img src="">
 					</figure>
-				</div>
+				</div-->
 				<div>
+				
 					<ul>
 						<li> <a href="/auth/facebook"><img src="/img/networks/facebook.png"></a></li>
 						<li> <a href="/auth/twitter"><img src="/img/networks/twitter.png"></a> </li>
 					</ul>
-					<form action="/post-far" method="post">
+					<section>
 						<span>
 							<label for="fear"><strong>F:</strong></label>
 							<input type="text" id="fear" name="fear" maxlength="140" placeholder="your fear" />
@@ -70,12 +71,13 @@
 							<label for="regret"><strong>R:</strong></label>
 							<input type="text" id="regret" name="regret" maxlength="140" placeholder="your regret" />
 						</span>
-
-						<button id="btnpost" type="submit">Post your FAR!</button>
-
-					</form>
+						<span class="buttons">
+							<button id="btnpost" data-toggle="modal" data-target="#modal-post">Post your FAR!</button>
+						</span>
+					</section>
+					
 				</div>
-			</section-->
+			</section>
 		{% for post in posts %}
 			<article>
 				<figure>

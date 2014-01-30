@@ -196,6 +196,18 @@ header #divider {
   width: 30%;
 z-index
 }
+
+.back-header{
+  background-color: #bdc3c7;
+  text-align: center;
+  font-size: 20px;
+}
+
+.back-body{
+  background-color: #fff;
+  text-align: left;
+}
+
 .container {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -271,6 +283,7 @@ z-index
   margin: 0 auto;
   padding: 0;
   width: 90%;
+  text-align: left;
 }
 
 .container article{
@@ -405,7 +418,7 @@ z-index
 }
 
 .container #post-far div{
-  width: 75%;
+  width: 90%;
 }
 
 .container #post-far div img{
@@ -440,24 +453,28 @@ z-index
   width: 100%;
 }
 
-.container #post-far div form span{
+.container #post-far div section span{
   display: block;
   margin-top: -15px;
   width: 100%;
 }
 
-.container #post-far div form span label, .container #post-far div form span input{
+.container #post-far div section span label, .container #post-far div section span input{
   display: inline-block;
   vertical-align: top;
 }
 
-.container #post-far div form span input{
+.container #post-far div section span input{
   width: 90%;
 }
 
-.container #post-far div form button{
+.container #post-far div section button{
   font-size: 14px;
   margin-top: -15px;
+}
+
+.container #post-far div section span.buttons{
+  margin-top: 1px;
 }
 
 .container #signature {
@@ -467,21 +484,21 @@ z-index
   text-align: right;
   width: 50%;
 }
-.container #post-form {
+#post-form {
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  width: 95%;
+  width: 100%;
 }
-.container #post-form h1 {
+#post-form h1 {
   font-weight: bold;
   font-size: 35px;
 }
-.container #post-form #social-login {
+#post-form #social-login {
   width: 100%;
 }
-.container #post-form #social-login a.fb-login,
-.container #post-form #social-login a.tw-login {
+#post-form #social-login a.fb-login,
+#post-form #social-login a.tw-login {
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
@@ -490,50 +507,50 @@ z-index
   vertical-align: middle;
   width: 40%;
 }
-.container #post-form #social-login a.fb-login:hover,
-.container #post-form #social-login a.tw-login:hover {
+#post-form #social-login a.fb-login:hover,
+#post-form #social-login a.tw-login:hover {
   text-decoration: underline;
 }
-.container #post-form #social-login a.fb-login {
+#post-form #social-login a.fb-login {
   color: #3b5998;
 }
-.container #post-form #social-login a.tw-login {
+#post-form #social-login a.tw-login {
   color: #31b6e3;
 }
-.container #post-form #login {
+#post-form #login {
   margin: 0 auto;
   padding: 0;
   padding-top: 25px;
-  width: 65%;
-}
-.container #post-form #login img {
   width: 100%;
 }
-.container #post-form #login span {
+#post-form #login img {
+  width: 100%;
+}
+#post-form #login span {
   display: block;
   margin: 0;
   padding: 0;
   margin-top: 8px;
   width: 100%;
 }
-.container #post-form #login span img,
-.container #post-form #login span p {
+#post-form #login span img,
+#post-form #login span p {
   display: inline-block;
   vertical-align: top;
 }
-.container #post-form #login span img {
+#post-form #login span img {
   width: 60px;
 }
-.container #post-form #login span #img-mail {
+#post-form #login span #img-mail {
   width: 25px;
 }
-.container #post-form #login span p {
+#post-form #login span p {
   font-weight: bold;
 }
-.container #post-form #login span label,
-.container #post-form #login span input,
-.container #post-form #login span textarea,
-.container #post-form #login span select {
+#post-form #login span label,
+#post-form #login span input,
+#post-form #login span textarea,
+#post-form #login span select {
   color: #000;
   display: inline-block;
   font-size: 15px;
@@ -543,18 +560,18 @@ z-index
   padding: 5px 0 5px 0;
   vertical-align: top;
 }
-.container #post-form #login span label {
+#post-form #login span label {
   font-size: 15px;
   font-weight: bold;
   text-align: right;
   width: 18%;
 }
-.container #post-form #login span input,
-.container #post-form #login span textarea,
-.container #post-form #login span select {
+#post-form #login span input,
+#post-form #login span textarea,
+#post-form #login span select {
   width: 70%;
 }
-.container #post-form #login button {
+#post-form #login button {
   font-size: 15px;
   width: 130px;
 }
@@ -1035,30 +1052,30 @@ footer ul li a:hover {
   .container #signature img {
     width: 100%;
   }
-  .container #post-form h1 {
+  #post-form h1 {
     font-size: 25px;
     margin: 0 auto;
     padding: 0;
     text-align: left;
     width: 90%;
   }
-  .container #post-form #login {
-    width: 90%;
+  #post-form #login {
+    width: 100%;
   }
-  .container #post-form #login form span {
+  #post-form #login form span {
     display: block;
     margin-bottom: 5px;
     width: 100%;
   }
-  .container #post-form #login form span img {
+  #post-form #login form span img {
     border-radius: 45px;
     width: 50px;
   }
-  .container #post-form #login form span #img-mail {
+  #post-form #login form span #img-mail {
     width: 30px;
   }
-  .container #post-form #login form span label {
-    font-size: 14px;
+  #post-form #login form span label {
+    font-size: 13px;
     text-align: left;
   }
 }
@@ -1256,26 +1273,26 @@ footer ul li a:hover {
     font-size: 13px;
     padding-top: 5px;
   }
-  .container #post-form h1 {
+  #post-form h1 {
     font-size: 25px;
     text-align: left;
     width: 100%;
   }
-  .container #post-form #login {
+  #post-form #login {
     width: 100%;
   }
-  .container #post-form #login form span {
+  #post-form #login form span {
     display: block;
     margin-bottom: 5px;
     width: 100%;
   }
-  .container #post-form #login form span img {
+  #post-form #login form span img {
     width: 50px;
   }
-  .container #post-form #login form span #img-mail {
+  #post-form #login form span #img-mail {
     width: 30px;
   }
-  .container #post-form #login form span label {
+  #post-form #login form span label {
     font-size: 13px;
     text-align: left;
   }
