@@ -37,3 +37,32 @@ function removePost(postId){
 
 	location.reload();
 }
+
+
+$(document).ready(function(){
+	for(var x = 1; x <= 100; x++){
+		$("<option value = " + x + ">" + x + "</option>").appendTo("#age");
+	}
+})
+
+$(document).ready(function(){
+	for(var x = 1; x <= 100; x++){
+		$("<option value = " + x + ">" + x + "</option>").appendTo("#age_social");
+	}
+
+	for(var x = 1; x <= 100; x++){
+		$("<option value = " + x + ">" + x + "</option>").appendTo("#age");
+	}
+})
+
+$('#btnpost_network').on('click',function (){
+	$('#fear_social').html($('#fear').val());
+	$('#aspiration_social').html($('#aspiration').val());
+	$('#regreat_social').html($('#regret').val());
+})
+
+$('#btnpost').on('click',function (){
+	$('#fear').html($('#fear_post').val());
+	$('#aspiration').html($('#aspiration_post').val());
+	$('#regreat').html($('#regret_post').val());
+})

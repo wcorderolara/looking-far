@@ -16,7 +16,7 @@ var postSchema = Schema({
 	photo    : {type: String},
 	usermail : {type: String, unique: true},
 	username : {type: String},
-	userage  : {type: Number},
+	userage  : {type: String},
 	usercity : {type: String},
 	usercountry : {type: String},
 	userfear : {type: String},
