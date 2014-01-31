@@ -30,7 +30,6 @@ var appController = function(app){
 
 	//POST SOCIAL LOG IN
 	app.get('/app-social', function (req,res){
-
 		if(!req.isAuthenticated()){
 			res.render('app');
 		}else{
@@ -42,21 +41,21 @@ var appController = function(app){
 		}
 	});
 
-	app.post('/social-post', function (req,res){
+	app.post('/social-post',multipartMiddleware, function (req,res){
 		console.log('doing request');
 		console.log(req.body);
-
+		debugger;
 		var social = new Post({
 			id : uuid.v1(),
-			photo : req.body.picture-social,
-			usermail : req.body.email-social,
-			username : req.body.name-social,
-			userage : parseInt(req.body.age-social, 10),
-			usercity : req.body.city-social,
-			usercountry : req.body.country-social,
-			userfear : req.body.fear-social,
-			useraspiration : req.body.aspiration-social,
-			userregreat : req.body.regreat-social,
+			photo : req.body.picture_social,
+			usermail : req.body.email_social,
+			username : req.body.name_social,
+			userage :  req.body.age_social,
+			usercity : req.body.city_social,
+			usercountry : req.body.country_social,
+			userfear : req.body.fear_social,
+			useraspiration : req.body.aspiration_social,
+			userregreat : req.body.regreat_social,
 			socialog : 1,
 			postActive : 1
 		});
@@ -95,7 +94,7 @@ var appController = function(app){
 			id : uuid.v1(),
 			usermail : req.body.email,
 			username : req.body.name,
-			userage : parseInt(req.body.age),
+			userage :  req.body.age,
 			usercity : req.body.city,
 			usercountry : req.body.country,
 			userfear : req.body.fear,
@@ -112,7 +111,6 @@ var appController = function(app){
                 res.send(500);
                 return;
             }
-            debugger;
             post.uploadImage(req.files.photo, function (err) {
                 if (err) {
                     res.send(500);

@@ -100,7 +100,7 @@
 								</span>
 								<span>
 									<label for="age">age: </label>
-									<input type="text" id="age" name="age" onkeypress="return soloNumeros(event);">
+									<select id="age" name="age"></select>
 								</span>
 								
 								<span>
@@ -341,47 +341,47 @@
 				<div class="modal-body">
 					<section class="post-form">
 						<div class="login">
-							<form action="/social-post" method="post">
+							<form action="/social-post" method="post" enctype="multipart/form-data">
 								<section id="post-1">
 									<figure id="post-fig">
 										<span>
 											{% if login %}
-												<img id="photo-social" src="{{ picture }}" alt="">
-												<input type="hidden" id="picture-social" name="picture-social" value="{{ picture }}">
+												<img id="photo_social" src="{{ picture }}" alt="">
+												<input type="hidden" id="picture_social" name="picture_social" value="{{ picture }}">
 											{% else %}
-												<img id="photo-social" src="/img/profile.png" alt="">
+												<img id="photo_social" src="/img/profile.png" alt="">
 												<!--input type="hidden" id="picture" name="picture" value=""-->
 											{% endif %}
 										</span>										
 									</figure>
 									<div>
 										<span>
-											<label for="email-social">email</label>
-											<input type="text" id="email-social" name="email-social">
+											<label for="email_social">email</label>
+											<input type="text" id="email_social" name="email_social">
 										</span>
 								
 										<span>
 											{% if login %}
-												<label for="name-social">name</label>
-												<input type="text" id="name-social" name="name-social" value="{{ user }}">
+												<label for="name_social">name</label>
+												<input type="text" id="name_social" name="name_social" value="{{ user }}">
 											{% else %}
-												<label for="name-social">name </label>
-												<input type="text" id="name-social" name="name-social">
+												<label for="name_social">name </label>
+												<input type="text" id="name_social" name="name_social">
 											{% endif %}
 										</span>
 										<span>
-											<label for="age-social">age: </label>
-											<select id="age-social" name="age-social"></select>
+											<label for="age_social">age: </label>
+											<select id="age_social" name="age_social"></select>
 										</span>
 								
 										<span>
-											<label for="city-social">city: </label>
-											<input type="text" id="city-social" name="city-social">
+											<label for="city_social">city: </label>
+											<input type="text" id="city_social" name="city_social">
 										</span>
 										
 										<span>
-											<label for="country-social">country: </label>
-											<select name="country-social" id="country-social">
+											<label for="country_social">country: </label>
+											<select name="country_social" id="country_social">
 												<option value="Afghanistan">Afghanistan</option>
 												<option value="Albania">Albania</option>
 												<option value="Algeria">Algeria</option>
@@ -580,20 +580,20 @@
 								</section>
 								<section id="post-2">
 									<span>
-										<label for="fear-social">fear: </label>
-										<textarea id="fear-social" name="fear-social" rows="2" cols="50" maxlength="140"></textarea>
+										<label for="fear_social">fear: </label>
+										<textarea id="fear_social" name="fear_social" rows="2" cols="50" maxlength="140"></textarea>
 									</span>
 									<span>
-										<label for="aspiration-social">aspiration: </label>
-										<textarea id="aspiration-social" name="aspiration-social" rows="2" cols="50" maxlength="140"></textarea>
+										<label for="aspiration_social">aspiration: </label>
+										<textarea id="aspiration_social" name="aspiration_social" rows="2" cols="50" maxlength="140"></textarea>
 									</span>
 									<span>
-										<label for="regreat-social">regret: </label>
-										<textarea id="regreat-social" name="regreat-social" rows="2" cols="50" maxlength="140"></textarea>
+										<label for="regreat_social">regret: </label>
+										<textarea id="regreat_social" name="regreat_social" rows="2" cols="50" maxlength="140"></textarea>
 									</span>
 								</section>
 								<section id="post-3">
-									<button id="btnpost-social" type="submit">Post!</button>
+									<button id="btnpost_social" type="submit">Post!</button>
 								</section>
 								
 							<!--button id="btnCancel">Cancel!</button-->
