@@ -17,24 +17,20 @@ var appController = function(app){
 	};
 
 	app.get('/test', function (req,res){
-		//Post.find({})
 		Post.find().sort({ postdate : -1 })
-
 		.exec(function (err, posts){
 			var postJson = _.map(posts,function (post){
 				return post.toJSON();
 			});
-			//debugger;
 			res.render('test',{
 				posts : postJson
 			});
 		});
 	});
 
-
 	//POST SOCIAL LOG IN
-
 	app.get('/app-social', function (req,res){
+
 		if(!req.isAuthenticated()){
 			res.render('app');
 		}else{
@@ -52,15 +48,15 @@ var appController = function(app){
 
 		var social = new Post({
 			id : uuid.v1(),
-			photo : req.body.picture,
-			usermail : req.body.email,
-			username : req.body.name,
-			userage : parseInt(req.body.age, 10),
-			usercity : req.body.city,
-			usercountry : req.body.country,
-			userfear : req.body.fear,
-			useraspiration : req.body.aspiration,
-			userregreat : req.body.regreat,
+			photo : req.body.picture-social,
+			usermail : req.body.email-social,
+			username : req.body.name-social,
+			userage : parseInt(req.body.age-social, 10),
+			usercity : req.body.city-social,
+			usercountry : req.body.country-social,
+			userfear : req.body.fear-social,
+			useraspiration : req.body.aspiration-social,
+			userregreat : req.body.regreat-social,
 			socialog : 1,
 			postActive : 1
 		});
@@ -94,7 +90,7 @@ var appController = function(app){
 	});
 
 	app.post('/post-far', multipartMiddleware, function (req,res){
-		//debugger;
+
 		var post = new Post({
 			id : uuid.v1(),
 			usermail : req.body.email,
@@ -111,7 +107,6 @@ var appController = function(app){
 
 		
         post.save(function (err) {
-        	//debugger;
             if (err) {
                 console.log(err);
                 res.send(500);

@@ -48,15 +48,8 @@
 {% block container %}
 	
 	<section class="container">
-		<section id="post-form">
-			<h1>Post your [FAR] here:</h1>
-
-			<div id="social-login">
-				<a href="/auth/facebook" class="fb-login">[Sign in with Facebook]</a>
-				<a href="/auth/twitter" class="tw-login">[Sign in with Twitter]</a>
-			</div>
-
-			<div id="login">
+		<section class="post-form">
+			<div class="login">
 				<form action="/post-far" method="post" enctype="multipart/form-data">
 					
 					<span>

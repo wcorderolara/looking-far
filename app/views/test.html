@@ -8,7 +8,7 @@
 {% endblock %}
 
 {%block header %}
-	<header>
+	<header id="header">
 		<ul>
 			<li class="hide ballon">
 				<a href="/maria"><img src="/img/ballons/Esfera1.png" title="" alt=""></a>
@@ -55,6 +55,7 @@
 					<ul>
 						<li> <a href="/auth/facebook"><img src="/img/networks/facebook.png"></a></li>
 						<li> <a href="/auth/twitter"><img src="/img/networks/twitter.png"></a> </li>
+						<li> <a href="/auth/twitter"><img src="/img/networks/upload.png"></a> </li>
 					</ul>
 					<section>
 						<span>
@@ -72,10 +73,9 @@
 							<input type="text" id="regret" name="regret" maxlength="140" placeholder="your regret" />
 						</span>
 						<span class="buttons">
-							<button id="btnpost" data-toggle="modal" data-target="#modal-post">Post your FAR!</button>
+							<button id="btnpost" data-toggle="modal" data-target="#modal-post-normal">Post your FAR!</button>
 						</span>
 					</section>
-					
 				</div>
 			</section>
 		{% for post in posts %}

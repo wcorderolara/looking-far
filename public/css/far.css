@@ -484,21 +484,21 @@ z-index
   text-align: right;
   width: 50%;
 }
-#post-form {
+.post-form {
   margin: 0 auto;
   padding: 0;
   text-align: center;
   width: 100%;
 }
-#post-form h1 {
+.post-form h1 {
   font-weight: bold;
   font-size: 35px;
 }
-#post-form #social-login {
+.post-form #social-login {
   width: 100%;
 }
-#post-form #social-login a.fb-login,
-#post-form #social-login a.tw-login {
+.post-form #social-login a.fb-login,
+.post-form #social-login a.tw-login {
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
@@ -507,50 +507,50 @@ z-index
   vertical-align: middle;
   width: 40%;
 }
-#post-form #social-login a.fb-login:hover,
-#post-form #social-login a.tw-login:hover {
+.post-form #social-login a.fb-login:hover,
+.post-form #social-login a.tw-login:hover {
   text-decoration: underline;
 }
-#post-form #social-login a.fb-login {
+.post-form #social-login a.fb-login {
   color: #3b5998;
 }
-#post-form #social-login a.tw-login {
+.post-form #social-login a.tw-login {
   color: #31b6e3;
 }
-#post-form #login {
+.post-form .login {
   margin: 0 auto;
   padding: 0;
   padding-top: 25px;
   width: 100%;
 }
-#post-form #login img {
+.post-form .login img {
   width: 100%;
 }
-#post-form #login span {
+.post-form .login span {
   display: block;
   margin: 0;
   padding: 0;
   margin-top: 8px;
   width: 100%;
 }
-#post-form #login span img,
-#post-form #login span p {
+.post-form .login span img,
+.post-form .login span p {
   display: inline-block;
   vertical-align: top;
 }
-#post-form #login span img {
+.post-form .login span img {
   width: 60px;
 }
-#post-form #login span #img-mail {
+.post-form .login span #img-mail {
   width: 25px;
 }
-#post-form #login span p {
+.post-form .login span p {
   font-weight: bold;
 }
-#post-form #login span label,
-#post-form #login span input,
-#post-form #login span textarea,
-#post-form #login span select {
+.post-form .login span label,
+.post-form .login span input,
+.post-form .login span textarea,
+.post-form .login span select {
   color: #000;
   display: inline-block;
   font-size: 15px;
@@ -560,20 +560,28 @@ z-index
   padding: 5px 0 5px 0;
   vertical-align: top;
 }
-#post-form #login span label {
+
+.post-form .login span label {
   font-size: 15px;
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   width: 18%;
 }
-#post-form #login span input,
-#post-form #login span textarea,
-#post-form #login span select {
+
+.post-form .login span input,
+.post-form .login span textarea,
+.post-form .login span select {
   width: 70%;
 }
-#post-form #login button {
+.post-form .login button {
   font-size: 15px;
   width: 130px;
+}
+
+.post-form .login form #post-1 figure img{
+  -webkit-border-radius: 40px;
+      -ms-border-radius: 40px;
+          border-radius: 40px;
 }
 
 .container #stories{
@@ -594,6 +602,7 @@ z-index
 
 .container #stories article figure img{
   width: 100%;
+  height:100%;
 }
 
 footer {
@@ -625,6 +634,152 @@ footer ul li a {
 footer ul li a:hover {
   font-weight: bold;
 }
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+     -moz-transition:    -moz-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  min-height: 16.428571429px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+.modal-body {
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+}
+.modal-footer {
+  padding: 19px 20px 20px;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+
 
 /*nuevos*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -688,7 +843,6 @@ footer ul li a:hover {
   }
   #menu ul li {
     display: inline-block;
-    font-size: 16px;
     vertical-align: middle;
   }
   #menu ul li a {
@@ -1052,29 +1206,29 @@ footer ul li a:hover {
   .container #signature img {
     width: 100%;
   }
-  #post-form h1 {
+  .post-form h1 {
     font-size: 25px;
     margin: 0 auto;
     padding: 0;
     text-align: left;
     width: 90%;
   }
-  #post-form #login {
+  .post-form .login {
     width: 100%;
   }
-  #post-form #login form span {
+  .post-form .login form span {
     display: block;
     margin-bottom: 5px;
     width: 100%;
   }
-  #post-form #login form span img {
+  .post-form .login form span img {
     border-radius: 45px;
     width: 50px;
   }
-  #post-form #login form span #img-mail {
+  .post-form .login form span #img-mail {
     width: 30px;
   }
-  #post-form #login form span label {
+  .post-form .login form span label {
     font-size: 13px;
     text-align: left;
   }
@@ -1273,26 +1427,26 @@ footer ul li a:hover {
     font-size: 13px;
     padding-top: 5px;
   }
-  #post-form h1 {
+  .post-form h1 {
     font-size: 25px;
     text-align: left;
     width: 100%;
   }
-  #post-form #login {
+  .post-form .login {
     width: 100%;
   }
-  #post-form #login form span {
+  .post-form .login form span {
     display: block;
     margin-bottom: 5px;
     width: 100%;
   }
-  #post-form #login form span img {
+  .post-form .login form span img {
     width: 50px;
   }
-  #post-form #login form span #img-mail {
+  .post-form .login form span #img-mail {
     width: 30px;
   }
-  #post-form #login form span label {
+  .post-form .login form span label {
     font-size: 13px;
     text-align: left;
   }
