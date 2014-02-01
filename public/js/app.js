@@ -66,3 +66,61 @@ $('#btnpost').on('click',function (){
 	$('#aspiration').html($('#aspiration_post').val());
 	$('#regreat').html($('#regret_post').val());
 })
+
+$('#fear_post').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your fear");
+		$(this).focus();
+		return  false;
+	}
+})
+
+$('#aspiration_post').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your aspiration");
+		$(this).focus();
+		return  false;
+	}
+})
+
+$('#regret_post').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your regret");
+		$(this).focus();
+		return  false;
+	}
+})
+
+$('#fear').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your fear");
+		$(this).focus();
+		return  false;
+	}
+})
+
+$('#aspiration').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your aspiration");
+		$(this).focus();
+		return  false;
+	}
+})
+
+$('#regret').on('blur',function (e){
+	e.preventDefault();
+	if($(this).val() == ""){
+		alert("Please add your regret");
+		$(this).focus();
+		return  false;
+	}
+})
+
+
+
+
