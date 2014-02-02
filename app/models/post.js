@@ -24,7 +24,8 @@ var postSchema = Schema({
 	userregreat : {type: String},
 	postdate : {type: Date, default: Date.now},
     socialog : {type: Number},
-    postActive : {type: Number}
+    postActive : {type: Number},
+    reminduser : {type:String}
 });
 
 function randomHash(str) {
