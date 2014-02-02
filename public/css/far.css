@@ -288,6 +288,7 @@ z-index
 
 .container article{
   padding-bottom: 15px;
+  text-align: center;
 }
 
 .container article .hero img{
@@ -411,17 +412,11 @@ z-index
   border-radius: 100px;
   margin:0 auto;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 55px;
   width: 50%;
   height: 90px;
-  background-color: #CCCCCC;
 }
 
-.container #post-far #fig figure img{
-  -webkit-border-radius: 50px;
-    -ms-border-radius: 50px;
-        border-radius: 50px;
-}
 .container #post-far div{
   width: 70%;
 }
@@ -963,7 +958,7 @@ button.close {
   }
   .container article {
     font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
   .container article p.text-about {
     font-size: 16px;
@@ -1199,6 +1194,7 @@ button.close {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 90%;
+    text-align: center;
     position: relative;
   }
   .container article p.text-about {
@@ -1411,6 +1407,8 @@ button.close {
     padding-bottom: 20px;
     text-align: center;
   }
+
+  .container
   .container img {
     width: 100%;
   }
@@ -1432,6 +1430,7 @@ button.close {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 90%;
+    text-align: center;
     position: relative;
   }
   .container article p.text-about {
