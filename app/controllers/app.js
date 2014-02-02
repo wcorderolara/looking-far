@@ -44,7 +44,6 @@ var appController = function(app){
 	app.post('/social-post',multipartMiddleware, function (req,res){
 		console.log('doing request');
 		console.log(req.body);
-		debugger;
 		var social = new Post({
 			id : uuid.v1(),
 			photo : req.body.picture_social,
@@ -57,7 +56,8 @@ var appController = function(app){
 			useraspiration : req.body.aspiration_social,
 			userregreat : req.body.regreat_social,
 			socialog : 1,
-			postActive : 1
+			postActive : 1,
+			reminduser : req.body.chkSocial
 		});
 
 		social.save(function (err) {
@@ -101,7 +101,8 @@ var appController = function(app){
 			useraspiration : req.body.aspiration,
 			userregreat : req.body.regreat,
 			socialog : 0,
-			postActive : 1
+			postActive : 1,
+			reminduser : req.body.chkNormal
 		});
 
 		

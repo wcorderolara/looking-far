@@ -28,7 +28,7 @@
 		</div>
 
 		<ul>
-			<li><a href="#" data-toggle="modal" data-target="#modal-post">post your <strong>FAR</strong></a></li>
+			<li><a href="#" data-toggle="modal" data-target="#modal-post-normal">post your <strong>FAR</strong></a></li>
 			<li class="separate">|</li>
 			<li><a href="/about">about the project</a></li>
 			<li class="separate">|</li>
@@ -85,7 +85,7 @@
 								<span>
 									<label for="photo">photo: </label>
 									<input type="file" id="photo" name="photo">
-									<p>file size lower or equals than 500kb.</p>
+									<p>File size should be lower or equal to 500 kb.</p>
 									<input type="hidden" id="picture" name="picture" value="">
 								</span>
 
@@ -317,6 +317,16 @@
 									<label for="regreat">regret: </label>
 									<textarea id="regreat" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
 								</span>
+								<span>
+									<ul>
+										<li>remind me in </li>
+										<li>1 <input type="radio" value="1" name="normal" onclick="remind(this,chkNormal)"> </li>
+										<li>2 <input type="radio" value="2" name="normal" onclick="remind(this,chkNormal)"> </li>
+										<li>5 <input type="radio" value="5" name="normal" onclick="remind(this,chkNormal)"> </li>
+										<li>years</li>
+									</ul>
+									<input type="hidden" id="chkNormal" name="chkNormal" value="0">
+								</span>
 
 								<button id="btnpost">Post!</button>
 								<!--button id="btnCancel">Cancel!</button-->
@@ -342,8 +352,8 @@
 					<section class="post-form">
 						<div class="login">
 							<form action="/social-post" method="post" enctype="multipart/form-data">
-								<section id="post-1">
-									<figure id="post-fig">
+								<section id="post_1">
+									<figure id="post_fig">
 										<span>
 											{% if login %}
 												<img id="photo_social" src="{{ picture }}" alt="">
@@ -578,7 +588,7 @@
 
 									</div>
 								</section>
-								<section id="post-2">
+								<section id="post_2">
 									<span>
 										<label for="fear_social">fear: </label>
 										<textarea id="fear_social" name="fear_social" rows="2" cols="50" maxlength="140"></textarea>
@@ -591,8 +601,18 @@
 										<label for="regreat_social">regret: </label>
 										<textarea id="regreat_social" name="regreat_social" rows="2" cols="50" maxlength="140"></textarea>
 									</span>
+									<span>
+										<ul>
+											<li>remind me in </li>
+										<li>1 <input type="radio" value="1" name="normal" onclick="remind(this,chkSocial)"> </li>
+										<li>2 <input type="radio" value="2" name="normal" onclick="remind(this,chkSocial)"> </li>
+										<li>5 <input type="radio" value="5" name="normal" onclick="remind(this,chkSocial)"> </li>
+										<li>years</li>
+										</ul>
+										<input type="hidden" id="chkSocial" name="chkSocial" value="0">
+									</span>
 								</section>
-								<section id="post-3">
+								<section id="post_3">
 									<button id="btnpost_social" type="submit">Post!</button>
 								</section>
 								

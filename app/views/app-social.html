@@ -45,12 +45,22 @@
 	
 	<section id="posts" class="container">
 			<section id="post-far">
+				<div id="fig">
+					<figure>
+						{% if login %}
+							<img src="{{ picture }}" alt="">
+						{% else %}
+							<img src="/img/profile.png" alt="">
+						{% endif %}
+						
+					</figure>
+				</div>
 				<div>
-				
 					<ul>
 						<li> <a href="/auth/facebook"><img src="/img/networks/facebook.png"></a></li>
 						<li> <a href="/auth/twitter"><img src="/img/networks/twitter.png"></a> </li>
-						<li> <a href="#"><img src="/img/networks/upload.png"></a> </li>
+						<li> <button data-toggle="modal" data-target="#modal-post-normal">Upload from file</button> </li>
+						<!--li> <a href="#"><img src="/img/networks/upload.png"></a> </li-->
 					</ul>
 					<section>
 						<span>

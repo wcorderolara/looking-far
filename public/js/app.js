@@ -21,6 +21,10 @@ $('#pull-menu').on('click', function(e){
 	$("#menu ul").slideToggle();
 })
 
+function remind(obj,objTxt){
+	//debugger;
+	objTxt.value = obj.value;
+}
 
 function removePost(postId){
 	debugger;

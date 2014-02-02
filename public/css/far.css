@@ -417,12 +417,18 @@ z-index
   background-color: #CCCCCC;
 }
 
+.container #post-far #fig figure img{
+  -webkit-border-radius: 50px;
+    -ms-border-radius: 50px;
+        border-radius: 50px;
+}
 .container #post-far div{
-  width: 90%;
+  width: 70%;
 }
 
 .container #post-far div img{
   width: 100%;
+
 }
 
 .container #post-far div ul{
@@ -436,6 +442,12 @@ z-index
   text-align: left;
   vertical-align: top;
   width: 175px;
+}
+
+.container #post-far div ul li button{
+  margin-top: 0;
+  height: 30px;
+  font-weight: bold;
 }
 
 .container #post-far div ul li a{
@@ -573,12 +585,29 @@ z-index
 .post-form .login span select {
   width: 70%;
 }
+
+
+.post-form .login span ul{
+  margin: 5px 0 0 0;
+  width: 100%;
+}
+
+.post-form .login span ul li{
+  font-weight: bold;
+  display: inline-block;
+}
+
+.post-form .login span ul li input[type="text"]{
+  width: 50px;
+}
+
 .post-form .login button {
   font-size: 15px;
   width: 130px;
 }
 
-.post-form .login form #post-1 figure img{
+.post-form .login form figure img{
+  width: 75px;
   -webkit-border-radius: 40px;
       -ms-border-radius: 40px;
           border-radius: 40px;
