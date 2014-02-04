@@ -81,22 +81,24 @@
 				<div class="modal-body">
 					<section class="post-form">	
 						<div class="login">
-							<form action="/post-far" method="post" enctype="multipart/form-data">
+							<form id="frmSinglePost" action="/post-far" method="post" enctype="multipart/form-data">
 								<span>
 									<label for="photo">photo: </label>
 									<input type="file" id="photo" name="photo">
-									<p style="font-size:11px; text-align:right; width:63%">File size should be lower or equal to 500 kb.</p>
+									<p style="font-size:11px; text-align:right; width:70%">*File size should be lower or equal to 500 kb.</p>
 									<input type="hidden" id="picture" name="picture" value="">
 								</span>
 
 								<span>
 									<label for="email">email: </label>
 									<input type="text" id="email" name="email">
+									<p class="error mail">*Please add an email account or an valid email.</p>
 								</span>
 								
 								<span>
 									<label for="name">name: </label>
 									<input type="text" id="name" name="name">
+									<p class="error name">*Please add your name.</p>
 								</span>
 								<span>
 									<label for="age">age: </label>
@@ -106,6 +108,7 @@
 								<span>
 									<label for="city">city: </label>
 									<input type="text" id="city" name="city">
+									<p class="error city">*Please add your city.</p>
 								</span>
 
 								<span>
@@ -307,15 +310,18 @@
 								
 								<span>
 									<label for="fear">fear: </label>
-									<textarea id="fear" name="fear" rows="2" cols="50" maxlength="140"></textarea>
+									<textarea id="fear_single" name="fear" rows="2" cols="50" maxlength="140"></textarea>
+									<p class="error fear">*Please add your Fear.</p>
 								</span>
 								<span>
 									<label for="aspiration">aspiration: </label>
-									<textarea id="aspiration" name="aspiration" rows="2" cols="50" maxlength="140"></textarea>
+									<textarea id="aspiration_single" name="aspiration" rows="2" cols="50" maxlength="140"></textarea>
+									<p class="error aspiration">*Please add your Aspiration.</p>
 								</span>
 								<span>
 									<label for="regreat">regret: </label>
-									<textarea id="regreat" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
+									<textarea id="regreat_single" name="regreat" rows="2" cols="50" maxlength="140"></textarea>
+									<p class="error regret">*Please add your Regret.</p>
 								</span>
 								<span>
 									<ul>
@@ -328,7 +334,7 @@
 									<input type="hidden" id="chkNormal" name="chkNormal" value="0">
 								</span>
 
-								<button id="btnpost">Post!</button>
+								<button id="btnpost_normal">Post!</button>
 								<!--button id="btnCancel">Cancel!</button-->
 							</form>
 						</div>
@@ -351,7 +357,7 @@
 				<div class="modal-body">
 					<section class="post-form">
 						<div class="login">
-							<form action="/social-post" method="post" enctype="multipart/form-data">
+							<form id="frmSocialPost" action="/social-post" method="post" enctype="multipart/form-data">
 								<section id="post_1">
 									<figure id="post_fig">
 										<span>
@@ -368,6 +374,7 @@
 										<span>
 											<label for="email_social">email: </label>
 											<input type="text" id="email_social" name="email_social">
+											<p class="error mail">*Please add an email account or an valid email.</p>
 										</span>
 								
 										<span>
@@ -387,6 +394,7 @@
 										<span>
 											<label for="city_social">city: </label>
 											<input type="text" id="city_social" name="city_social">
+											<p class="error city">*Please add your city.</p>
 										</span>
 										
 										<span>
@@ -592,14 +600,17 @@
 									<span>
 										<label for="fear_social">fear: </label>
 										<textarea id="fear_social" name="fear_social" rows="2" cols="50" maxlength="140"></textarea>
+										<p class="error fear">*Please add your Fear.</p>
 									</span>
 									<span>
 										<label for="aspiration_social">aspiration: </label>
 										<textarea id="aspiration_social" name="aspiration_social" rows="2" cols="50" maxlength="140"></textarea>
+										<p class="error aspiration">*Please add your Aspiration.</p>
 									</span>
 									<span>
 										<label for="regreat_social">regret: </label>
 										<textarea id="regreat_social" name="regreat_social" rows="2" cols="50" maxlength="140"></textarea>
+										<p class="error regret">*Please add your Regret.</p>
 									</span>
 									<span>
 										<ul>
@@ -640,7 +651,7 @@
 	</footer>
 
 	
-	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/app.min.js"></script>
 	
 	{% block scripts %} {% endblock %}
 </body>

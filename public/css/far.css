@@ -398,6 +398,18 @@ z-index
   text-align: left;
 }
 
+.error{
+  background-color: #E4D9D9;
+  border: 1px solid #E1534E;
+  color: #d9534f;
+  display: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-left: 25%;
+  width: 50%;
+}
+
 .container #post-far #fig, .container #post-far div{
   display: inline-block;
   vertical-align: top;
@@ -415,6 +427,12 @@ z-index
   margin-top: 55px;
   width: 50%;
   height: 90px;
+}
+
+.container #post-far #fig figure img{
+  -webkit-border-radius: 50px;
+      -ms-border-radius: 50px;
+          border-radius: 50px;
 }
 
 .container #post-far div{
@@ -540,8 +558,7 @@ z-index
   margin-top: 8px;
   width: 100%;
 }
-.post-form .login span img,
-.post-form .login span p {
+.post-form .login span img{
   display: inline-block;
   vertical-align: top;
 }

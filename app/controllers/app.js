@@ -43,7 +43,7 @@ var appController = function(app){
 
 	app.post('/social-post',multipartMiddleware, function (req,res){
 		console.log('doing request');
-		console.log(req.body);
+		//console.log(req.body);
 		var social = new Post({
 			id : uuid.v1(),
 			photo : req.body.picture_social,
@@ -89,7 +89,6 @@ var appController = function(app){
 	});
 
 	app.post('/post-far', multipartMiddleware, function (req,res){
-
 		var post = new Post({
 			id : uuid.v1(),
 			usermail : req.body.email,
