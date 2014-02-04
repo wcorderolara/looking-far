@@ -44,6 +44,16 @@ postSchema.methods.uploadImage = function (imageObj, next) {
     move(imageObj.path, dest, function (err) {
         if ( err ) { return next(err); }
 
+ /*       debugger;
+        magick.resize({
+            srcPath : imageObj.path,
+            dstPath : dest,
+            width   : 200
+        }, function (err,stdout,stderr){
+            if(err)
+                console.log(err);
+        });
+*/
         doc.set('photo', nameImage);
         doc.save(function ( err ) {
             next(err);
