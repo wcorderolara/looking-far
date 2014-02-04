@@ -101,7 +101,7 @@ header #divider {
   font-size: 16px;
   text-decoration: none;
 }
-#menu ul li a:hover {
+#menu ul li:hover {
   font-weight: bold;
 }
 #menu ul li.separate {
@@ -618,11 +618,28 @@ z-index
   width: 130px;
 }
 
-.post-form .login form figure img{
-  width: 75px;
-  -webkit-border-radius: 40px;
-      -ms-border-radius: 40px;
-          border-radius: 40px;
+
+
+.post-form .login form #post_1 figure,
+.post-form .login form #post_1 div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.post-form .login form #post_1 figure{
+  margin-top: 5%;
+  width: 25%;
+}
+
+.post-form .login form #post_1 figure img{
+  width: 75%;
+  -webkit-border-radius: 100px;
+      -ms-border-radius: 100px;
+          border-radius: 100px;
+}
+
+.post-form .login form #post_1 div{
+  width: 70%;
 }
 
 .container #stories{
