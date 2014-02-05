@@ -175,7 +175,7 @@ $('#regreat_single').on('blur', function (e){
 
 function validarForm(){
 	var valida = true;
-
+	debugger;
 	if($('#email').val() === ''){
 		$('#email').siblings("p").css('display','block');
 		$('#email').focus();
@@ -204,6 +204,11 @@ function validarForm(){
 	}else if($('#regreat_single').val() === ''){
 		$('#regreat_single').siblings("p").css('display','block');
 		$('#regreat_single').focus();
+		valida = false;
+		return valida;
+	}else if( $('#photo').val() === ''){
+		$('#photo').siblings("p").css('display','block');
+		$('#photo').focus();
 		valida = false;
 		return valida;
 	}else{
