@@ -12,7 +12,7 @@ var mailController = function (app){
 			 port : 465,
 			 auth : {
 			 	user : "info@looking-far.com",
-			 	pass : "LookingFar14"
+			 	pass : "InfoAdmin13"
 			 }
 		});
 		

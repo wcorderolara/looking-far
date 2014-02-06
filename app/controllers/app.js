@@ -11,18 +11,18 @@ var appController = function(app){
 
 	var isLogged = function (req,res,nest){
 		if(!req.isAuthenticated()){
-			res.redirect('/test');
+			res.redirect('/');
 			return;
 		}
 	};
 
-	app.get('/test', function (req,res){
+	app.get('/', function (req,res){
 		Post.find().sort({ postdate : -1 })
 		.exec(function (err, posts){
 			var postJson = _.map(posts,function (post){
 				return post.toJSON();
 			});
-			res.render('test',{
+			res.render('index',{
 				posts : postJson
 			});
 		});
@@ -67,7 +67,7 @@ var appController = function(app){
                 //res.send(500);
                 return;
             }else{
-            	res.redirect('/test');
+            	res.redirect('/');
             }
         });
 	});
@@ -120,7 +120,7 @@ var appController = function(app){
             });
 
         });
-        res.redirect('/test');
+        res.redirect('/');
 	});
 };
 
