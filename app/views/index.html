@@ -1,6 +1,6 @@
-{% extends 'layout2.html' %}
+{% extends 'layout.html' %}
 
-{% block head %}
+	{% block head %}
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
@@ -8,71 +8,110 @@
 {% endblock %}
 
 {%block header %}
-	<header>
+	<header id="header">
 		<ul>
 			<li class="hide ballon">
-				<img src="/img/ballons/Esfera1.png" title="" alt="">
+				<a href="/maria"><img src="/img/ballons/Esfera1.png" title="" alt=""></a>
 			</li>
 			<li class="hide dot">
 				<p>. . .</p>
 			</li>
 			<li class="hide ballon">
-				<img src="/img/ballons/Esfera2.png" title="" alt="">
+				<a href="/lee"><img src="/img/ballons/Esfera2.png" title="" alt=""></a>
 			</li>
 			<li class="hide dot">
 				<p>. . .</p>
 			</li>
 			<li>
-				<img src="/img/logo.png" title="" alt="" class="logo">
+				<a href="/">[looking<strong>FAR</strong>]</a>
 			</li>
 			<li class="hide dot">
 				<p>. . .</p>
 			</li>
 			<li class="hide ballon">
-				<img src="/img/ballons/Esfera3.png" title="" alt="">
+				<a href="/josette"><img src="/img/ballons/Esfera3.png" title="" alt=""></a>
 			</li>
 			<li class="hide dot">
 				<p>. . .</p>
 			</li>
 			<li class="hide ballon">
-				<img src="/img/ballons/Esfera4.png" title="" alt="">
+				<a href="/victor"><img src="/img/ballons/Esfera4.png" title="" alt=""></a>
 			</li>
 		</ul>
-
-		<div id="divider"></div>
 	</header>
 {% endblock %}
 
-
 {% block container %}
 	
-	<section class="container">
-		<section id="text" class="sixteen columns">
-			<h1>COMING</h1>
-			<h2 class="remove-bottom"><strong>[SOON!]</strong></h2>
-		</section>
-		<section id="social" class="sixteen columns">
-			<ul>
-				<li>
-					<a href="https://www.facebook.com/lookingfar2013" target="_blank">
-						<img src="img/networks/BotonFacebook.png" title="Like" alt="Like">
-					</a>
-				</li>
-				<li>
-					<a href="http://instagram.com/lookingfar" target="_blank">
-						<img src="img/networks/BotonInstagram.png" title="Share" alt="Share">
-					</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/_LookingFAR" target="_blank">
-						<img src="img/networks/BotonTwitter.png" title="Follow" alt="Follow">
-					</a>
-				</li>
-			</ul>
-		</section>
+	<section id="posts" class="container">
+			<section id="post-far">
+				<div id="fig">
+					<figure>
+						<img src="/img/profile.png">
+					</figure>
+				</div>
+				<div>
+				
+					<ul>
+						<li> <a href="/auth/facebook"><img src="/img/networks/facebook.png"></a></li>
+						<li> <a href="/auth/twitter"><img src="/img/networks/twitter.png"></a> </li>
+						<!--li> <button data-toggle="modal" data-target="#modal-post-normal">Upload from file</button> </li-->
+						<li> <a href="#modal-post-normal" data-toggle="modal"><img src="/img/networks/upload.png"></a> </li>
+					</ul>
+					<section>
+						<span>
+							<label for="fear_post"><strong>F:</strong></label>
+							<input type="text" id="fear_post" name="fear_post" maxlength="140" placeholder="your fear" />
+						</span>
+
+						<span>
+							<label for="aspiration_post"><strong>A:</strong></label>
+							<input type="text" id="aspiration_post" name="aspiration_post" maxlength="140" placeholder="your aspiration" />
+						</span>
+
+						<span>
+							<label for="regret_post"><strong>R:</strong></label>
+							<input type="text" id="regret_post" name="regret_post" maxlength="140" placeholder="your regret" />
+						</span>
+						<span class="buttons">
+							<button id="btnpost" data-toggle="modal" data-target="#modal-post-normal">Post your FAR!</button>
+						</span>
+					</section>
+				</div>
+			</section>
+		{% for post in posts %}
+			<article>
+				<figure>
+					{% if post.socialog == 1 %}
+						<img class="img-post" src="{{ post.photo }}" alt="" title="">
+					{% else %}
+						<img class="img-post" src="/img/posts/{{ post.photo }}" alt="" title="">
+					{% endif %}
+				</figure>
+				<div class="far">
+					<p class="fear">
+						<strong>F:</strong> {{ post.userfear }}
+					</p>
+					<p class="aspiration">
+						<strong>A:</strong> {{ post.useraspiration }}
+					</p>
+					<p class="regreat">
+						<strong>R:</strong> {{ post.userregreat }}
+					</p>
+					<p class="info">{{post.username}}, {{ post.userage }} years, {{post.usercity}}, {{post.usercountry}}</p>
+				</div>
+				<div class="share">
+					<ul>
+						<li><a class="share-facebook">share on Facebook</a></li>
+						<li><a class="share-twitter">share on Twitter</a> </li>
+					</ul>
+				</div>
+			</article>
+		{% endfor %}
+
 	</section><!-- container -->
 {% endblock %}
 
 {% block scripts %}
-	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+		
 {% endblock %}

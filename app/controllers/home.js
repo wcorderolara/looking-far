@@ -3,9 +3,9 @@ var passport = require('passport');
 var homeController =  function (app){
 	console.log("homeController load");
 
-	app.get('/', function (req, res){
+	/*app.get('/', function (req, res){
 		res.render('index');
-	});
+	});*/
 
 	app.get('/about', function(req,res){
 		res.render('about');
