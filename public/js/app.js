@@ -27,9 +27,9 @@ function remind(obj,objTxt){
 }
 
 function removePost(postId){
-	debugger;
+	//debugger;
 	var xhr = $.ajax({
-		type : 'PUT',
+		type : 'DELETE',
 		url : '/panel/delete/' + postId,
 		async : true,
 		crossDomain : true
@@ -37,9 +37,10 @@ function removePost(postId){
 
 	xhr.done(function(){
 		alert("the post has been deleted");
+		window.location.reload();
 	})
 
-	location.reload();
+	//location.reload();
 }
 
 
