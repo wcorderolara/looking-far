@@ -20,42 +20,22 @@ var panelController = function (app){
 		});
 	});
 
-	app.put('/panel/delete/:id', function (req,res){
+	app.delete('/panel/delete/:id', function (req,res){
+		//debugger;
+		console.log('deleting post with id: ' + req.params.id);
 
-		Post.findById(req.params.id, function (err,post){
-			Post.postActive = 0;
-			
-			Post.save(function (err){
-				if(!err){
-					console.log('post update');
-				}else{
-					console.log(err);
-				}
-			})
-
-		})
+		Post.remove( { id : req.params.id }, function (err,post){
+			if(!err){
+				console.log('post remove');
+				return res.send('');
+			}else{
+				console.log(err);
+			}
+		});
 
 		res.render('panel');
 
 	})
-
-	/*app.delete('/panel/delete/:id', function (req,res){
-
-		Post.findById(req.params.id, function (err,post){
-			
-			Post.remove(function (err){
-				if(!err){
-					console.log('Post Remove');
-				}else{
-					console.log(err);
-				}
-			})
-
-		})
-
-		res.render('panel');
-
-	})*/
 
 };
 
