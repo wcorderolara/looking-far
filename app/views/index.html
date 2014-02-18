@@ -89,15 +89,15 @@
 					{% endif %}
 				</figure>
 				<div class="far">
-					<p class="fear">
-						<strong>F:</strong> {{ post.userfear }}
-					</p>
-					<p class="aspiration">
-						<strong>A:</strong> {{ post.useraspiration }}
-					</p>
-					<p class="regreat">
-						<strong>R:</strong> {{ post.userregreat }}
-					</p>
+					<div class="fear">
+						<p class="far-text"><strong>F:</strong></p> <p>{{ post.userfear }}</p>
+					</div>
+					<div class="aspiration">
+						<p class="far-text"><strong>A:</strong></p> <p>{{ post.useraspiration }}</p>
+					</div>
+					<div class="regreat">
+						<p class="far-text"><strong>R:</strong></p> <p>{{ post.userregreat }}</p>
+					</div>
 					<p class="info">{{post.username}}, {{ post.userage }} years, {{post.usercity}}, {{post.usercountry}}</p>
 				</div>
 				<div class="share">
