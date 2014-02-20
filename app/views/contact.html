@@ -44,24 +44,24 @@
 {% block container %}
 	
 	<section class="container">
-		<section id="post-form">
+		<section class="contact-form">
 			<h1>Contact us</h1>
 
-			<div id="login">
+			<div class="login">
 				<form action="/send-mail" method="post">
 
 					<span>
-						<label for="name">name: </label>
+						<label for="name">name:</label>
 						<input type="text" id="name" name="name" value="{{ user }}">
 					</span>
 
 					<span>
-						<label for="email">email: </label>
+						<label for="email">email:</label>
 						<input type="text" id="email" name="email">
 					</span>
 
 					<span>
-						<label for="country">country: </label>
+						<label for="country">country:</label>
 						<select name="country" id="country">
 							<option value="Afghanistan">Afghanistan</option>
 							<option value="Albania">Albania</option>
@@ -258,7 +258,7 @@
 					</span>
 
 					<span>
-						<label for="comment">comment: </label>
+						<label for="comment">comment:</label>
 						<textarea id="comment" name="comment" rows="5" cols="50" maxlength="250"></textarea>
 					</span>
 

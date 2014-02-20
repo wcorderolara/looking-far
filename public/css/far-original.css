@@ -697,6 +697,7 @@ z-index
   width: 70%;
 }
 
+
 .container #stories{
   margin: 0 auto;
   padding: 0;
@@ -718,16 +719,70 @@ z-index
   height:100%;
 }
 
+.contact-form{
+  text-align: center;
+}
+.contact-form .login {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 25px;
+  width: 100%;
+}
+.contact-form .login img {
+  width: 100%;
+}
+.contact-form .login span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  width: 100%;
+}
+.contact-form .login span img{
+  display: inline-block;
+  vertical-align: top;
+}
+.contact-form .login span img {
+  width: 60px;
+}
+.contact-form .login span #img-mail {
+  width: 25px;
+}
+.contact-form .login span p {
+  font-weight: bold;
+}
+.contact-form .login span label,
+.contact-form .login span input,
+.contact-form .login span textarea,
+.contact-form .login span select {
+  color: #000;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  padding: 5px 0 5px 0;
+  vertical-align: top;
+}
+
+.contact-form .login span label {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  width: 18%;
+}
+
+.contact-form .login span input,
+.contact-form .login span textarea,
+.contact-form .login span select {
+  width: 70%;
+}
+
 footer {
   margin: 0;
   padding: 0;
   padding-top: 25px;
   width: 100%;
-/*article:hover
-		cursor pointer
-		div.share
-			display block
-			transition display 0.5 ease-in*/
 }
 footer ul {
   margin: 0 auto;
@@ -1711,6 +1766,19 @@ button.close {
     font-size: 13px;
     text-align: left;
   }
+  .contact-form .login span label {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    width: 18%;
+  }
+  .contact-form .login span input,
+  .contact-form .login span textarea,
+  .contact-form .login span select {
+    margin-left: 3%;
+    width: 65%;
+  }
+
   footer {
     margin: 0;
     padding: 0;
@@ -1746,7 +1814,3 @@ button.close {
     width: 40%;
   }
 }
-
-
-
-
