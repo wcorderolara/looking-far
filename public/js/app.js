@@ -313,5 +313,22 @@ $('#btnpost_social').on('click', function (e){
 	}
 })
 
-
-
+function goSocialNetwork(sn){
+	switch(sn){
+		case 'fb':
+			window.open("https://www.facebook.com/lookingfar2013");
+			break;
+		case 'ins':
+			window.open("http://instagram.com/lookingfar");
+			break;
+		case 'tw':
+			window.open("https://twitter.com/_LookingFAR");
+			break;
+		case 'vim':
+			window.open("http://vimeo.com/lookingfar");
+			break;
+		default:
+			window.location.href="http://looking-far.com";
+			break;
+	}
+}
