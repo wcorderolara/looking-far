@@ -193,10 +193,6 @@ header #divider {
   z-index: 1000;
 }
 
-#social-menu #networks ul{
-  margin-bottom: 5px;
-}
-
 #social-menu #networks ul li.snFacebook,
 #social-menu #networks ul li.snInstagram,
 #social-menu #networks ul li.snTwitter,
@@ -999,31 +995,6 @@ button.close {
     width: 900px;
   }
 
-
-  #social-menu #networks ul li.snFacebook,
-  #social-menu #networks ul li.snInstagram,
-  #social-menu #networks ul li.snTwitter,
-  #social-menu #networks ul li.snVimeo{
-    cursor: pointer;
-  }
-
-  #social-menu #networks ul li.snFacebook{
-    background-position: 0 -40px;
-  }
-
-
-  #social-menu #networks ul li.snInstagram{
-    background-position: -40px -40px;
-  }
-
-  #social-menu #networks ul li.snTwitter{
-    background-position: -80px -40px;
-  }
-
-  #social-menu #networks ul li.snVimeo{
-    background-position: -120px -40px;
-  }
-
 }
 
 
@@ -1486,7 +1457,6 @@ button.close {
   #social-menu #networks ul li.snVimeo{
     background-position: -120px -40px;
   }
-
   .container {
     float: none;
     width: 100%;
@@ -1767,6 +1737,7 @@ button.close {
     position: relative;
     z-index: 99;
   }
+
   #social-menu #networks ul li.snFacebook,
   #social-menu #networks ul li.snInstagram,
   #social-menu #networks ul li.snTwitter,
@@ -1790,6 +1761,7 @@ button.close {
   #social-menu #networks ul li.snVimeo{
     background-position: -120px -40px;
   }
+  
   .container {
     float: none;
     margin: 0 auto;
