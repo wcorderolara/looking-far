@@ -201,42 +201,44 @@ header #divider {
   background-repeat: no-repeat;
   background-size: 400%;
   cursor: pointer;
-  -o-transition: background-position 0.5s ;
-  -ms-transition: background-position  0.5s ;
-  -moz-transition: background-position 0.5s ;
-  -webkit-transition: background-position 0.5s ;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
 }
 
 #social-menu #networks ul li.snFacebook{
-  background-position: 0 0;
-}
-
-#social-menu #networks ul li.snFacebook:hover{
   background-position: 0 -40px;
 }
-
 #social-menu #networks ul li.snInstagram{
-  background-position: -40px 0;
-}
-
-#social-menu #networks ul li.snInstagram:hover{
   background-position: -40px -40px;
 }
 
 #social-menu #networks ul li.snTwitter{
-  background-position: -80px 0;
-}
-
-#social-menu #networks ul li.snTwitter:hover{
   background-position: -80px -40px;
 }
 
 #social-menu #networks ul li.snVimeo{
-  background-position: -120px 0;
+  background-position: -120px -40px;
 }
 
+#social-menu #networks ul li.snFacebook:hover,
+#social-menu #networks ul li.snInstagram:hover,
+#social-menu #networks ul li.snTwitter:hover,
 #social-menu #networks ul li.snVimeo:hover{
-  background-position: -120px -40px;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
 }
 
 #paypal-buy {
@@ -1137,6 +1139,14 @@ button.close {
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
     cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
   }
 
   #social-menu #networks ul li.snFacebook{
@@ -1439,6 +1449,14 @@ button.close {
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
     cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
   }
 
   #social-menu #networks ul li.snFacebook{
@@ -1743,6 +1761,14 @@ button.close {
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
     cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
   }
 
   #social-menu #networks ul li.snFacebook{
@@ -1761,7 +1787,7 @@ button.close {
   #social-menu #networks ul li.snVimeo{
     background-position: -120px -40px;
   }
-  
+
   .container {
     float: none;
     margin: 0 auto;
