@@ -197,14 +197,10 @@ header #divider {
 #social-menu #networks ul li.snInstagram,
 #social-menu #networks ul li.snTwitter,
 #social-menu #networks ul li.snVimeo{
-  background-image: url('/img/networks/social_networks.png');
+  background-image: url('/img/networks/social_gray.png');
   background-repeat: no-repeat;
   background-size: 400%;
   cursor: pointer;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
   -o-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -212,33 +208,48 @@ header #divider {
 }
 
 #social-menu #networks ul li.snFacebook{
-  background-position: 0 -40px;
+  background-position: 0 0;
 }
 #social-menu #networks ul li.snInstagram{
-  background-position: -40px -40px;
+  background-position: -40px 0;
 }
 
 #social-menu #networks ul li.snTwitter{
-  background-position: -80px -40px;
+  background-position: -80px 0 ;
 }
 
 #social-menu #networks ul li.snVimeo{
-  background-position: -120px -40px;
+  background-position: -120px 0;
 }
 
 #social-menu #networks ul li.snFacebook:hover,
 #social-menu #networks ul li.snInstagram:hover,
 #social-menu #networks ul li.snTwitter:hover,
 #social-menu #networks ul li.snVimeo:hover{
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
+  background-image: url('/img/networks/social_colors.png');
+  background-repeat: no-repeat;
+  background-size: 400%;
+  cursor: pointer;
   -o-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
+}
+
+#social-menu #networks ul li.snFacebook:hover{
+  background-position: 0 0;
+}
+
+#social-menu #networks ul li.snInstagram:hover{
+  background-position: -40px 0;
+}
+
+#social-menu #networks ul li.snTwitter:hover{
+  background-position: -80px 0 ;
+}
+
+#social-menu #networks ul li.snVimeo:hover{
+  background-position: -120px 0;
 }
 
 #paypal-buy {
@@ -1138,32 +1149,31 @@ button.close {
   #social-menu #networks ul li.snInstagram,
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
+    background-image: url('/img/networks/social_colors.png');
+    background-repeat: no-repeat;
+    background-size: 400%;
     cursor: pointer;
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
   }
 
   #social-menu #networks ul li.snFacebook{
-    background-position: 0 -40px;
+    background-position: 0 0;
   }
 
 
   #social-menu #networks ul li.snInstagram{
-    background-position: -40px -40px;
+    background-position: -40px 0;
   }
 
   #social-menu #networks ul li.snTwitter{
-    background-position: -80px -40px;
+    background-position: -80px 0;
   }
 
   #social-menu #networks ul li.snVimeo{
-    background-position: -120px -40px;
+    background-position: -120px 0;
   }
   /*nuevo*/
 
@@ -1427,7 +1437,7 @@ button.close {
     width: 40px;
   }
   #social-menu #networks ul li img:hover {
-    cursor: pointer;
+
     -o-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -1448,11 +1458,10 @@ button.close {
   #social-menu #networks ul li.snInstagram,
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
+    background-image: url('/img/networks/social_colors.png');
+    background-repeat: no-repeat;
+    background-size: 400%;
     cursor: pointer;
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
     -o-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1460,20 +1469,20 @@ button.close {
   }
 
   #social-menu #networks ul li.snFacebook{
-    background-position: 0 -40px;
+    background-position: 0 0;
   }
 
 
   #social-menu #networks ul li.snInstagram{
-    background-position: -40px -40px;
+    background-position: -40px 0;
   }
 
   #social-menu #networks ul li.snTwitter{
-    background-position: -80px -40px;
+    background-position: -80px 0;
   }
 
   #social-menu #networks ul li.snVimeo{
-    background-position: -120px -40px;
+    background-position: -120px 0;
   }
   .container {
     float: none;
@@ -1760,6 +1769,9 @@ button.close {
   #social-menu #networks ul li.snInstagram,
   #social-menu #networks ul li.snTwitter,
   #social-menu #networks ul li.snVimeo{
+    background-image: url('/img/networks/social_colors.png');
+    background-repeat: no-repeat;
+    background-size: 400%;
     cursor: pointer;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
@@ -1772,20 +1784,20 @@ button.close {
   }
 
   #social-menu #networks ul li.snFacebook{
-    background-position: 0 -40px;
+    background-position: 0 0;
   }
 
 
   #social-menu #networks ul li.snInstagram{
-    background-position: -40px -40px;
+    background-position: -40px 0;
   }
 
   #social-menu #networks ul li.snTwitter{
-    background-position: -80px -40px;
+    background-position: -80px 0;
   }
 
   #social-menu #networks ul li.snVimeo{
-    background-position: -120px -40px;
+    background-position: -120px 0;
   }
 
   .container {
