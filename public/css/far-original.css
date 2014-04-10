@@ -279,6 +279,16 @@ header #divider {
   text-align: left;
 }
 
+.container ul.slides{
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.container ul.slides img{
+  width: 85%;
+}
+
 .container #text {
   padding: 50px 0 50px 0;
   height: auto;

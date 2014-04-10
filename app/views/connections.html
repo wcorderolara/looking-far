@@ -4,7 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
-	<link rel="stylesheet" type="text/css" href="/css/far.css">
+	<link rel="stylesheet" type="text/css" href="/css/far-original.css">
 {% endblock %}
 
 {%block header %}
@@ -45,16 +45,50 @@
 	
 	<section class="container">
 		<!--h1>About Looking[FAR]</h1-->
-
-		<article id="text">
-			<h1>COMING</h1>
-			<h2 class="remove-bottom"><strong>[SOON!]</strong></h2>
-		</article>
-
+		<ul class="slides">
+			<li>
+				<img src="/img/connections/Connections-1.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-2.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-3.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-4.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-5.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-6.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-7.png" alt="">
+			</li>
+			<li>
+				<img src="/img/connections/Connections-8.png" alt="">
+			</li>
+		</ul>
 
 	</section><!-- container -->
 {% endblock %}
 
 {% block scripts %}
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script type='text/javascript' src='/js/bxslider.js'></script>
+	<script>
+		$('.container ul.slides').bxSlider({
+			mode: 'horizontal',
+			auto: true,
+			minSlides: 1,
+			responsive: true,
+			touchEnabled: true,
+			pager: false,
+			controls: false,
+			useCSS: false,
+			pause:3500
+		})
+	</script>
 {% endblock %}
