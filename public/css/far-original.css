@@ -258,7 +258,7 @@ header #divider {
   text-align: left;
   position: relative;
   top: -80px;
-  width: 30%;
+  width: 20%;
   z-index
 }
 
@@ -308,6 +308,10 @@ header #divider {
   width: 100%
 }
 
+#pic-buy, #paypal-buy{
+  display: inline-block;
+  vertical-align: bottom;
+}
 .container #social {
   margin-top: 45px;
   text-align: center;
@@ -1290,6 +1294,16 @@ button.close {
   .container article div.far .regreat p{
     width: 95%;
   }
+
+  .container #text #buy-book img{
+    width: 100%;
+  }
+
+  #paypal-buy{
+    margin-top: 25px;
+    text-align: center;
+    width: 100%
+  }
   
   footer ul li a{
     color: #848484;
@@ -1622,6 +1636,12 @@ button.close {
   }
   .container #signature img {
     width: 100%;
+  }
+
+  #paypal-buy{
+    margin-top: 25px;
+    text-align: center;
+    width: 100%
   }
   .post-form h1 {
     font-size: 25px;
@@ -1972,7 +1992,13 @@ button.close {
     margin-left: 3%;
     width: 65%;
   }
-
+  
+  #paypal-buy{
+    margin-top: 25px;
+    text-align: center;
+    width: 100%
+  }
+  
   footer {
     margin: 0;
     padding: 0;
